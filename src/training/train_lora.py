@@ -67,7 +67,7 @@ model.print_trainable_parameters()
 
 args = TrainingArguments(
     output_dir=a.out, num_train_epochs=a.epochs, learning_rate=a.lr, lr_scheduler_type="cosine",
-    warmup_ratio=0.05, per_device_train_batch_size=a.bs, per_device_eval_batch_size=a.bs,
+    warmup_steps=0.05, per_device_train_batch_size=a.bs, per_device_eval_batch_size=a.bs,
     gradient_accumulation_steps=a.accum, fp16=True, logging_steps=5,
     eval_strategy="epoch", save_strategy="epoch", save_total_limit=3,
     load_best_model_at_end=True, metric_for_best_model="eval_loss", greater_is_better=False,
