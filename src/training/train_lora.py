@@ -30,7 +30,7 @@ class DS(torch.utils.data.Dataset):
         for l in open(f"data/processed/{split}.jsonl", encoding="utf-8"):
             r = json.loads(l)
             p = tok.apply_chat_template(build_messages(r["note"], r["criterion_type"], r["criterion_text"]),
-                                        add_generation_prompt=True, tokenize=True)
+                                        add_generation_prompt=True, tokenize=True, return_dict=False)
             t = tok(build_target(r["label"], r["evidence_ids"]) + tok.eos_token)["input_ids"]
             ids, lab = p + t, [-100] * len(p) + t
             if len(ids) > a.max_len:
