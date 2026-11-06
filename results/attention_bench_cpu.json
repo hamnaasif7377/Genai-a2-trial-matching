@@ -1,0 +1,118 @@
+{
+  "device": "cpu",
+  "torch": "2.15.0+cpu",
+  "B": 1,
+  "H": 8,
+  "D": 64,
+  "blocks": [
+    128,
+    128
+  ],
+  "rows": [
+    {
+      "L": 128,
+      "impl": "reference",
+      "median_ms": 1.4677999934065156,
+      "peak_extra_mem_MB": null,
+      "score_buffer_MB_analytic": 0.5
+    },
+    {
+      "L": 128,
+      "impl": "tiled",
+      "median_ms": 2.3050000017974526,
+      "peak_extra_mem_MB": null,
+      "score_buffer_MB_analytic": 0.5
+    },
+    {
+      "L": 128,
+      "impl": "torch_sdpa",
+      "median_ms": 0.7360000017797574,
+      "peak_extra_mem_MB": null,
+      "score_buffer_MB_analytic": NaN
+    },
+    {
+      "L": 256,
+      "impl": "reference",
+      "median_ms": 4.553099999611732,
+      "peak_extra_mem_MB": null,
+      "score_buffer_MB_analytic": 2.0
+    },
+    {
+      "L": 256,
+      "impl": "tiled",
+      "median_ms": 5.6251999994856305,
+      "peak_extra_mem_MB": null,
+      "score_buffer_MB_analytic": 0.5
+    },
+    {
+      "L": 256,
+      "impl": "torch_sdpa",
+      "median_ms": 1.55570000060834,
+      "peak_extra_mem_MB": null,
+      "score_buffer_MB_analytic": NaN
+    },
+    {
+      "L": 512,
+      "impl": "reference",
+      "median_ms": 12.16040000144858,
+      "peak_extra_mem_MB": null,
+      "score_buffer_MB_analytic": 8.0
+    },
+    {
+      "L": 512,
+      "impl": "tiled",
+      "median_ms": 16.577399997913744,
+      "peak_extra_mem_MB": null,
+      "score_buffer_MB_analytic": 0.5
+    },
+    {
+      "L": 512,
+      "impl": "torch_sdpa",
+      "median_ms": 6.467100000008941,
+      "peak_extra_mem_MB": null,
+      "score_buffer_MB_analytic": NaN
+    },
+    {
+      "L": 1024,
+      "impl": "reference",
+      "median_ms": 47.01449999993201,
+      "peak_extra_mem_MB": null,
+      "score_buffer_MB_analytic": 32.0
+    },
+    {
+      "L": 1024,
+      "impl": "tiled",
+      "median_ms": 52.956699997594114,
+      "peak_extra_mem_MB": null,
+      "score_buffer_MB_analytic": 0.5
+    },
+    {
+      "L": 1024,
+      "impl": "torch_sdpa",
+      "median_ms": 12.868600002548192,
+      "peak_extra_mem_MB": null,
+      "score_buffer_MB_analytic": NaN
+    },
+    {
+      "L": 2048,
+      "impl": "reference",
+      "median_ms": 243.25049999606563,
+      "peak_extra_mem_MB": null,
+      "score_buffer_MB_analytic": 128.0
+    },
+    {
+      "L": 2048,
+      "impl": "tiled",
+      "median_ms": 198.6851999972714,
+      "peak_extra_mem_MB": null,
+      "score_buffer_MB_analytic": 0.5
+    },
+    {
+      "L": 2048,
+      "impl": "torch_sdpa",
+      "median_ms": 41.4089000041713,
+      "peak_extra_mem_MB": null,
+      "score_buffer_MB_analytic": NaN
+    }
+  ]
+}
