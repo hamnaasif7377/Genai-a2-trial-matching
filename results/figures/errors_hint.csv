@@ -1,0 +1,1019 @@
+annotation_id,type,criterion,gold,pred,gold_ids,pred_ids,raw
+0,inclusion,Patients of chronic stable angina with abnormal Exercise Myocardial Perfusion Spect Scan with reversible and partially reversible ischemic changes.,not enough information,not applicable,"[0, 1, 2]",[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+1,inclusion,Male and female,included,not applicable,[0],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+2,inclusion,Age 25 to 65 years,included,not applicable,[0],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+5,exclusion,Hypertension of > 170/100 mm of Hg,not excluded,excluded,[],[4],"```json
+{
+  ""label"": ""excluded"",
+  ""evidence_sentence_ids"": [4]
+}
+```"
+6,exclusion,Valvular heart disease and cardiomyopathy,not excluded,excluded,[],[5],"```json
+{
+  ""label"": ""excluded"",
+  ""evidence_sentence_ids"": [5]
+}
+```"
+7,exclusion,Myocardial infarction in < 6 months,not excluded,not applicable,[],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+8,exclusion,Unstable angina,not enough information,excluded,"[0, 1, 2]","[1, 2, 3, 4, 5, 6, 7, 8]","{
+  ""label"": ""excluded"",
+  ""evidence_sentence_ids"": [1, 2, 3, 4, 5, 6, 7, 8]
+}"
+9,exclusion,Congestive cardiac failure,not excluded,not applicable,[],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+10,exclusion,Severe anemia (Hb 7G/dl),not excluded,not applicable,[],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+11,exclusion,Cardiac arrhythmias or II or III degree AV block,not excluded,excluded,[],[5],"```json
+{
+  ""label"": ""excluded"",
+  ""evidence_sentence_ids"": [5]
+}
+```"
+12,exclusion,Significant liver or renal dysfunction,not excluded,not applicable,[],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+13,exclusion,IDDM (Type-1 diabetes mellitus),not excluded,not applicable,[4],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+14,exclusion,Systolic blood pressure < 100 mm Hg,not excluded,not applicable,[3],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+15,exclusion,Pregnant and nursing women,not enough information,not applicable,[],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+16,exclusion,Known hypersensitivity to nicorandil,not excluded,excluded,[],[5],"```json
+{
+  ""label"": ""excluded"",
+  ""evidence_sentence_ids"": [5]
+}
+```"
+17,exclusion,On calcium channel blockers,not excluded,not applicable,[5],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+18,exclusion,Patients not eligible for Tc 99m SPECT,not enough information,excluded,[],[1],"```json
+{
+  ""label"": ""excluded"",
+  ""evidence_sentence_ids"": [1]
+}
+```"
+19,exclusion,Patients in whom beta blockers are contraindicated,not enough information,excluded,[],[1],"```json
+{
+  ""label"": ""excluded"",
+  ""evidence_sentence_ids"": [1]
+}
+```"
+20,exclusion,Geographical inaccessibility for treatment or follow-up evaluations,not excluded,not applicable,[8],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+22,inclusion,"Clinical diagnosis of one or more risk factors, such as diabetes, smoking habit, lipid metabolism abnormality, history of ischemic heart disease (IHD) or cerebrovascular disease, obesity (BMI>25), chronic heart failure (NYHA II-III), and electrocardiogram (ECG) abnormality (LVH)",included,not applicable,"[3, 4]",[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+23,exclusion,Patients who have already been administered ARB,not excluded,excluded,[5],[1],"```json
+{
+  ""label"": ""excluded"",
+  ""evidence_sentence_ids"": [1]
+}
+```"
+24,exclusion,"Patients with IHD within 6 months after percutaneous coronary intervention(PCI), and who are stable but are going to implement PCI or coronary artery bypass grafting(CABG)",not applicable,excluded,[],[1],"```json
+{
+  ""label"": ""excluded"",
+  ""evidence_sentence_ids"": [1]
+}
+```"
+25,exclusion,Severe/malignant/secondary hypertensive patients,not excluded,excluded,[3],[5],"```json
+{
+  ""label"": ""excluded"",
+  ""evidence_sentence_ids"": [5]
+}
+```"
+26,exclusion,Pregnant women and women of childbearing potential,not enough information,not applicable,[0],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+27,exclusion,"History of heart failure, unstable angina, myocardial infarction, PTCA, or CABG within the preceding 6 months",not excluded,excluded,[],[1],"```json
+{
+  ""label"": ""excluded"",
+  ""evidence_sentence_ids"": [1]
+}
+```"
+28,exclusion,"Arrhythmia needed to be treated or accompanied with symptoms, second or third degree AV block",not excluded,not applicable,[],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+29,exclusion,Severe renal impairment (Serum creatinine >3.0 mg/dl),not excluded,not applicable,[],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+30,exclusion,"Severe hepatic impairment (Hepatic failure, Cirrhosis, etc.)",not excluded,not applicable,[],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+31,inclusion,patients have fever more than one week,not included,not applicable,[0],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+32,inclusion,temperature is higher than 38℃ Celsius degree,included,not applicable,[0],[],"{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}"
+34,exclusion,fever for non-infectious diseases such as rheumatic autoimmune disease or with tumor,not excluded,excluded,[],[0],"```json
+{
+  ""label"": ""excluded"",
+  ""evidence_sentence_ids"": [0]
+}
+```"
+35,exclusion,we find that the patient selected does not meet the selection criteria within the observation period,not enough information,excluded,[],"[0, 1, 2, 3, 4, 5]","{
+  ""label"": ""excluded"",
+  ""evidence_sentence_ids"": [0, 1, 2, 3, 4, 5]
+}"
+36,exclusion,patients leave with automatic discharge,not enough information,not applicable,[],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+39,exclusion,Chest tubes,not excluded,excluded,[],[4],"{
+  ""label"": ""excluded"",
+  ""evidence_sentence_ids"": [4]
+}"
+40,exclusion,Skin lesions precluding attachment of sensors,not excluded,excluded,[],[6],"```json
+{
+  ""label"": ""excluded"",
+  ""evidence_sentence_ids"": [6]
+}
+```"
+42,exclusion,Pregnant women,not applicable,excluded,[0],[6],"```json
+{
+  ""label"": ""excluded"",
+  ""evidence_sentence_ids"": [6]
+}
+```"
+235,inclusion,Menorrhagia and/or bulk symptoms associated with uterine fibroids,not enough information,included,"[0, 1, 4, 5]","[0, 1, 2, 3, 4]","```json
+{
+  ""label"": ""included"",
+  ""evidence_sentence_ids"": [0, 1, 2, 3, 4]
+}
+```"
+236,exclusion,Malignancy,not excluded,excluded,"[0, 1, 4, 5]",[5],"{
+  ""label"": ""excluded"",
+  ""evidence_sentence_ids"": [5]
+}"
+237,exclusion,Current or planned pregnancy,not excluded,excluded,"[0, 3]",[5],"```json
+{
+  ""label"": ""excluded"",
+  ""evidence_sentence_ids"": [5]
+}
+```"
+238,exclusion,Small submucous fibroids suitable for hysteroscopic resection,not excluded,not applicable,[4],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+239,exclusion,Postmenopausal women,not excluded,excluded,[0],[5],"```json
+{
+  ""label"": ""excluded"",
+  ""evidence_sentence_ids"": [5]
+}
+```"
+240,exclusion,Suspected or known adenomyosis,not excluded,excluded,[],[4],"```json
+{
+  ""label"": ""excluded"",
+  ""evidence_sentence_ids"": [4]
+}
+```"
+241,exclusion,Uterus size exceeding the umbilical level,not excluded,excluded,[1],[1],"```json
+{
+  ""label"": ""excluded"",
+  ""evidence_sentence_ids"": [1]
+}
+```"
+242,exclusion,Contraindications against laparoscopic surgery,not excluded,excluded,[],[5],"```json
+{
+  ""label"": ""excluded"",
+  ""evidence_sentence_ids"": [5]
+}
+```"
+243,inclusion,"1. Subject with uterine fibroids, who desire pregnancy within 12 months and has the one of the following criteria: Women 20-40 age. Women age < 46 years old who plan to have egg donation. Women above 38 should test for normal ovarian function as judged by endocrinological evaluation. If the couple h",not enough information,not applicable,"[0, 3, 5]",[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+244,inclusion,2. Use or non use of non-steroidal treatments for excessive vaginal bleeding such as antifibrinolytic agents (e.g. Tranexamic acid) or non-steroidal anti-inflammatory drugs (e.g. Mefanamic Acid) has been maintained for the three months prior to the planned date of the study procedure and the patient,not enough information,not applicable,[],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+245,inclusion,3. Clinically normal PAP smear within timing of National Guidelines in the country of the clinical site.,not enough information,not applicable,[],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+247,inclusion,5. Able to communicate sensations during the MRgFUS procedure,not enough information,not applicable,[6],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+248,inclusion,"6. Having uterine fibroids that are device accessible (i.e., positioned in the uterus such that they can be accessed without being shielded by bowel or bone).",not enough information,included,[4],"[1, 2, 3, 4]","```json
+{
+  ""label"": ""included"",
+  ""evidence_sentence_ids"": [1, 2, 3, 4]
+}
+```"
+249,inclusion,7. Tumor(s) are clearly visible on non-contrast MRI.,not enough information,not applicable,[],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+250,inclusion,8. Largest fibroid 8 cm in diameter or 12 cm if receiving GnRH,not enough information,not applicable,[4],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+251,exclusion,1. Patient is pregnant as confirmed by pregnancy test at time of screening,not excluded,excluded,[3],[5],"```json
+{
+  ""label"": ""excluded"",
+  ""evidence_sentence_ids"": [5]
+}
+```"
+252,exclusion,2. Uterine size >20 weeks as evaluated by US or MR.,not excluded,excluded,[1],[1],"```json
+{
+  ""label"": ""excluded"",
+  ""evidence_sentence_ids"": [1]
+}
+```"
+253,exclusion,"3. Patients who are considered high risk pregnancy due to uterine factors (e.g. abnormal uterus, uterine scars, cerclage) except fibroids.",not enough information,excluded,[4],"[1, 2, 3, 4, 5]","```json
+{
+  ""label"": ""excluded"",
+  ""evidence_sentence_ids"": [1, 2, 3, 4, 5]
+}
+```"
+254,exclusion,4. Patients with fibroid that is more than 50% sub-mucosal or with hysteroscopically resectable,not enough information,excluded,[],[2],"```json
+{
+  ""label"": ""excluded"",
+  ""evidence_sentence_ids"": [2]
+}
+```"
+255,exclusion,5. Patients with adenomyosis,not enough information,excluded,[],[4],"```json
+{
+  ""label"": ""excluded"",
+  ""evidence_sentence_ids"": [4]
+}
+```"
+256,exclusion,6. Patient is on dialysis,not excluded,not applicable,[],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+257,exclusion,7. Hematocrit is < 25,not excluded,excluded,[2],[4],"```json
+{
+  ""label"": ""excluded"",
+  ""evidence_sentence_ids"": [4]
+}
+```"
+258,exclusion,8. Patient has hemolytic anemia,not excluded,not applicable,[],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+259,exclusion,9. Patient has unstable cardiac status including: § Unstable angina pectoris on medication§ Documented myocardial infarction within 6 months of protocol entry§ Congestive heart failure requiring medication (other than diuretic)§ Currently taking anti-arrhythmic drugs§ Severe hypertension (diastolic ,not excluded,not applicable,[],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+260,exclusion,10. Patient has an ASA score of >2,not enough information,not applicable,[],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+261,exclusion,11. Patient has severe cerebrovascular disease (multiple CVA or CVA within 6 months),not excluded,not applicable,[],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+262,exclusion,12. Patient is on anti-coagulation therapy or has an underlying bleeding disorder,not excluded,not applicable,[],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+264,exclusion,14. Patient has an active pelvic infection or history of pelvic inflammatory disease,not excluded,not applicable,[],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+265,exclusion,15. Patient has an undiagnosed pelvic mass outside the uterus.,not excluded,excluded,[],[4],"```json
+{
+  ""label"": ""excluded"",
+  ""evidence_sentence_ids"": [4]
+}
+```"
+266,exclusion,16. Patient weight >110 kg,not enough information,not applicable,[],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+267,exclusion,17. Subject with extensive abdominal scarring in an area of the abdomen directly anterior to the treatment area.,not excluded,not applicable,[],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+268,exclusion,18. Subject with standard contraindications for MR imaging such as non-MRI compatable implanted metallic devices.,not excluded,excluded,[],[1],"```json
+{
+  ""label"": ""excluded"",
+  ""evidence_sentence_ids"": [1]
+}
+```"
+269,exclusion,19. Known intolerance to the MRI contrast agent (e.g. Gadolinium or Magnevist).,not excluded,not applicable,[],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+270,exclusion,20. Individuals who are not able or willing to tolerate the required prolonged stationary prone position during treatment (approximately 3 hours.),not excluded,not applicable,[6],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+271,exclusion,21. Patient with an intrauterine contraceptive device anywhere in the treatment beam path.,not excluded,excluded,[],[1],"```json
+{
+  ""label"": ""excluded"",
+  ""evidence_sentence_ids"": [1]
+}
+```"
+272,exclusion,22. Women who are breast feeding.,not excluded,not applicable,[],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+273,exclusion,"23. Five or more fibroids, bigger then 3cm diameter, each",not enough information,excluded,[],[1],"```json
+{
+  ""label"": ""excluded"",
+  ""evidence_sentence_ids"": [1]
+}
+```"
+364,inclusion,"Is male or female, 18 years of age or older",included,not applicable,[0],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+365,inclusion,Has provided written informed consent or has surrogate consent provided by a Legally Authorized Representative (LAR),included,not applicable,[6],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+366,inclusion,"Has experienced abdominal trauma, blunt or penetrating, requiring open abdominal laparotomy with primary closure",included,not applicable,"[0, 4, 5]",[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+367,inclusion,Has experienced acute surgical abdomen requiring open abdominal laparotomy with primary closure,included,not applicable,"[0, 4]",[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+368,exclusion,Known allergy to Chlorhexidine Gluconate (CHG),not excluded,excluded,[],[1],"```json
+{
+  ""label"": ""excluded"",
+  ""evidence_sentence_ids"": [1]
+}
+```"
+369,exclusion,"Estimated Abbreviated Injury Scale (AIS) score of six (6) at the time of surgery, for all trauma patients",not excluded,excluded,[2],"[1, 2, 3, 4, 5, 6]","{
+  ""label"": ""excluded"",
+  ""evidence_sentence_ids"": [1, 2, 3, 4, 5, 6]
+}"
+370,exclusion,"American Society of Anesthesiologists Physical Status Classification (ASA) score of five (5) or greater (As ASA scoring is a subjective measure, if the PI finds the patient stable enough for study participation despite a score of 5, enrollment may continue.)",not excluded,not applicable,[2],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+371,exclusion,Female volunteers who are pregnant and/or breast feeding,not excluded,excluded,[],"[0, 1, 2]","{
+  ""label"": ""excluded"",
+  ""evidence_sentence_ids"": [0, 1, 2]
+}"
+372,exclusion,Damage control laparotomy,not excluded,excluded,[],"[1, 2, 3, 4, 5, 6]","```json
+{
+  ""label"": ""excluded"",
+  ""evidence_sentence_ids"": [1, 2, 3, 4, 5, 6]
+}
+```"
+373,exclusion,Abdominal incision created prior to operating room (i.e. incision made in trauma bay to cross clamp the aorta),not excluded,excluded,[],[4],"```json
+{
+  ""label"": ""excluded"",
+  ""evidence_sentence_ids"": [4]
+}
+```"
+374,exclusion,"Currently enrolled in an ongoing, interventional, randomized clinical trial",not excluded,not applicable,[],[],"{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}"
+375,inclusion,Trauma patients undergoing DC/OA management for traumatic injury,not enough information,included,"[0, 1]","[0, 1, 2, 3, 4, 5]","{
+  ""label"": ""included"",
+  ""evidence_sentence_ids"": [0, 1, 2, 3, 4, 5]
+}"
+376,inclusion,Age 18+,included,not applicable,[0],[],"{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}"
+377,inclusion,Life expectancy longer than 48 hours,included,not applicable,"[2, 3]",[],"{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}"
+378,exclusion,Prisoners,not excluded,excluded,[],[0],"{
+  ""label"": ""excluded"",
+  ""evidence_sentence_ids"": [0]
+}"
+379,exclusion,Pregnant patients,not enough information,excluded,[],[0],"{
+  ""label"": ""excluded"",
+  ""evidence_sentence_ids"": [0]
+}"
+380,exclusion,Younger than 18 years of age,not excluded,not included,[0],[0],"{
+  ""label"": ""not included"",
+  ""evidence_sentence_ids"": [0]
+}"
+500,inclusion,Presence of duodenal polyps with a sum of diameters ≥ 5mm.,not enough information,not applicable,[],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+501,inclusion,Minimum of two weeks since any major surgery,included,not applicable,[],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+502,inclusion,WHO performance status ≤1,not enough information,not applicable,[],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+503,inclusion,"Adequate bone marrow function as show by: normal leukocyte count, platelet count ≥ 120 x 109/L, Hgb > 12 g/dL",not enough information,not applicable,[],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+504,inclusion,Adequate liver function as shown by: normal serum bilirubin(≤ 1.5 Upper Limit Normal {ULN}) and serum transaminases (≤ 2.0 ULN),not enough information,not applicable,[],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+505,inclusion,Patient must discontinue taking any Nonsteroidal anti-inflammatory drugs (NSAIDS) within one month of treatment initiation.,included,not applicable,[],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+507,exclusion,Prior treatment with any investigational drug within the preceding 4 weeks.,not excluded,not applicable,[],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+508,exclusion,Malignancies within the past 3 years except for adequately treated carcinoma of the cervix or basal or squamous cell carcinomas of the skins.,not excluded,not applicable,[],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+509,exclusion,"Patients who have any severe and/or uncontrolled medical conditions or other conditions that could affect their participation in the study as determined by the Principal Investigator such as: Unstable angina pectoris, symptomatic congestive heart failure, myocardial infarction ≤ 6 months prior to fi",not excluded,not applicable,[],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+510,exclusion,"Screening clinical laboratory values that indicate any of the following: anemia thrombocytopenia leucopenia elevations of transaminases greater than 2X ULN elevation of bilirubin > 1.5 X ULN alkaline phosphatase elevation > 1.5 X ULN increased creatinine, urinary protein, or urinary casts outside th",not enough information,not applicable,[],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+511,exclusion,"Gastrointestinal bleeding (symptoms including dyspnea, fatigue, angina, weakness, malaise, melena, hematochezia, hematemesis, anemia or abdominal pain will require clinical assessment to rule out gastrointestinal bleeding).",not excluded,not applicable,[],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+512,exclusion,Patient who is currently taking any anti-coagulation medication.,not excluded,not applicable,[],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+514,exclusion,Patients with a known hypersensitivity to sulindac or erlotinib or to their excipients,not excluded,not applicable,[],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+517,exclusion,Less than 18 years old,not excluded,not included,[],[0],"{
+  ""label"": ""not included"",
+  ""evidence_sentence_ids"": [0]
+}"
+518,exclusion,Diagnosis of IBD,not excluded,not applicable,[],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+541,inclusion,Known moderate PVD,not enough information,included,"[0, 7]","[3, 4, 5]","{
+  ""label"": ""included"",
+  ""evidence_sentence_ids"": [3, 4, 5]
+}"
+542,inclusion,New claudication patient with Rutherford stage 2 and Fontaine stage 2a symptoms,not enough information,included,[0],"[0, 1, 2, 3, 4, 5, 6, 7]","```json
+{
+  ""label"": ""included"",
+  ""evidence_sentence_ids"": [0, 1, 2, 3, 4, 5, 6, 7]
+}
+```"
+543,exclusion,Known upper limb PVD,not excluded,excluded,[],[3],"{
+  ""label"": ""excluded"",
+  ""evidence_sentence_ids"": [3]
+}"
+544,exclusion,Severe cardiac condition,not excluded,excluded,"[2, 3]","[2, 3, 4]","{
+  ""label"": ""excluded"",
+  ""evidence_sentence_ids"": [2, 3, 4]
+}"
+545,exclusion,Risk classification for exercise training: class C and above,not enough information,not applicable,[],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+546,exclusion,Severe respiratory condition,not excluded,not applicable,[],[],"{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}"
+547,exclusion,Previous history of upper limb deep vein thrombosis,not excluded,not applicable,[],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+548,exclusion,Patients on glibenclamide or nicorandil- May affect RIPC,not excluded,excluded,[4],[3],"```json
+{
+  ""label"": ""excluded"",
+  ""evidence_sentence_ids"": [3]
+}
+```"
+549,exclusion,Raynaud's Disease,not excluded,excluded,[],[7],"{
+  ""label"": ""excluded"",
+  ""evidence_sentence_ids"": [7]
+}"
+550,exclusion,Contra indications for MRA,not enough information,excluded,[],[3],"```json
+{
+  ""label"": ""excluded"",
+  ""evidence_sentence_ids"": [3]
+}
+```"
+552,exclusion,Previous major limb amputation affect ability to exercise,not excluded,excluded,[],[7],"```json
+{
+  ""label"": ""excluded"",
+  ""evidence_sentence_ids"": [7]
+}
+```"
+553,inclusion,Males or females older than 18 years of age.,included,not applicable,[0],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+554,inclusion,Limb ischemia with ABI of < 0.7 in the index lower extremity in two consecutive examinations done at least 1 week apart.,not enough information,included,[],"[0, 1, 2, 3, 4, 5, 6, 7]","```json
+{
+  ""label"": ""included"",
+  ""evidence_sentence_ids"": [0, 1, 2, 3, 4, 5, 6, 7]
+}
+```"
+555,inclusion,Limb ischemia with resting ischemic pain and/or claudication at 100 meters and/or non-healing ulcers.,not enough information,included,[0],"[0, 1, 2, 3, 4, 5, 6, 7]","```json
+{
+  ""label"": ""included"",
+  ""evidence_sentence_ids"": [0, 1, 2, 3, 4, 5, 6, 7]
+}
+```"
+557,inclusion,"Patients not considered candidates for surgical or percutaneous revascularization, due to poor target vessels, inability to cross total occlusions, or a morbidity which precludes general anesthesia.",not enough information,not applicable,[],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+558,exclusion,Inability to provide informed consent.,not applicable,excluded,[8],[8],"{
+  ""label"": ""excluded"",
+  ""evidence_sentence_ids"": [8]
+}"
+559,exclusion,Previous angiogenic therapy.,not excluded,not applicable,[],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+560,exclusion,Known sensitivity to gentamycin and/or amphotericin B.,not excluded,not applicable,[],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+561,exclusion,Use or expected use of antineoplastic drugs.,not excluded,not applicable,[],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+562,exclusion,"Any illness, which might affect the patient's survival after enrollment in the protocol.",not enough information,excluded,[],"[1, 2, 3, 4, 5, 6, 7, 8]","```json
+{
+  ""label"": ""excluded"",
+  ""evidence_sentence_ids"": [1, 2, 3, 4, 5, 6, 7, 8]
+}
+```"
+563,exclusion,"Any illness or significant laboratory abnormality, which in the investigator's judgment will interfere with the patient's ability to comply with the protocol, compromise the patient's safety, or interfere with the interpretation of the study results.",not enough information,excluded,[],"[1, 2, 3, 4, 5, 6, 7, 8]","```json
+{
+  ""label"": ""excluded"",
+  ""evidence_sentence_ids"": [1, 2, 3, 4, 5, 6, 7, 8]
+}
+```"
+564,exclusion,No evidence of acute infection,not excluded,not applicable,[],[],"{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}"
+565,exclusion,WBC > 15000.,not enough information,not applicable,[],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+566,exclusion,WBC < 4000.,not enough information,not applicable,[],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+567,exclusion,Serum Creatinine > 3.0 mg/dL in patients who are not in hemodialysis.,not enough information,excluded,[],[7],"```json
+{
+  ""label"": ""excluded"",
+  ""evidence_sentence_ids"": [7]
+}
+```"
+568,exclusion,Pregnant women or women planning to become pregnant or unwilling to use appropriate birth control methods before and 2 months after cell infusion.,not applicable,excluded,[],[6],"```json
+{
+  ""label"": ""excluded"",
+  ""evidence_sentence_ids"": [6]
+}
+```"
+569,exclusion,Recent myocardial infarction within 3 months prior to screening.,not excluded,excluded,[2],[1],"```json
+{
+  ""label"": ""excluded"",
+  ""evidence_sentence_ids"": [1]
+}
+```"
+799,inclusion,Seen at UCSF Medical Center for cryptogenic stroke or high-risk TIA,not enough information,included,[],[0],"```json
+{
+  ""label"": ""included"",
+  ""evidence_sentence_ids"": [0]
+}
+```"
+800,inclusion,Onset of stroke or TIA symptoms within the previous 60 days,included,not applicable,[0],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+802,exclusion,Source found on vascular imaging of possible culprit vessels,not excluded,excluded,[2],[3],"```json
+{
+  ""label"": ""excluded"",
+  ""evidence_sentence_ids"": [3]
+}
+```"
+803,exclusion,Source found by echocardiography (TEE not required),not excluded,not applicable,[2],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+804,exclusion,History of atrial fibrillation,not excluded,excluded,[4],[3],"```json
+{
+  ""label"": ""excluded"",
+  ""evidence_sentence_ids"": [3]
+}
+```"
+805,exclusion,Atrial fibrillation on admission ECG,not excluded,excluded,[3],[3],"```json
+{
+  ""label"": ""excluded"",
+  ""evidence_sentence_ids"": [3]
+}
+```"
+806,exclusion,Atrial fibrillation detected by inpatient cardiac telemetry (at least 24 hours required),not enough information,not applicable,[],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+807,exclusion,Obvious culpable systemic illness such as endocarditis,not excluded,not applicable,[],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+808,exclusion,"Patient unable to provide written, informed consent",not excluded,not applicable,[5],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+809,inclusion,"Subjects who have had a cryptogenic stroke within the previous 3 months, radiologically verified",included,not applicable,[0],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+810,inclusion,"Subjects who have been diagnosed with a high-risk* Patent Foramen Ovale (PFO), echocardiographically verified (*PFO size ≥ 2 mm or atrial septal aneurysm or hypermobility by TEE)",not enough information,included,[],[3],"```json
+{
+  ""label"": ""included"",
+  ""evidence_sentence_ids"": [3]
+}
+```"
+812,inclusion,Absence of other potential causes of stroke,not enough information,not applicable,[0],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+813,exclusion,Any identifiable cause of thromboembolic cause other than PFO,not excluded,not applicable,[0],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+814,exclusion,"Subjects with intracardiac thrombus or tumor, dilated cardiomyopathy, prosthetic heart valve or mitral stenosis, endocarditis",not excluded,excluded,[],[3],"```json
+{
+  ""label"": ""excluded"",
+  ""evidence_sentence_ids"": [3]
+}
+```"
+815,exclusion,"Subjects with significant atherosclerosis or dissection of the aorta, collagen vascular disease, arteritis, vasculitis and coagulopathy",not excluded,not applicable,[],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+816,exclusion,Subjects who have an acute or recent (within 6 months) myocardial infarction or unstable angina,not excluded,not applicable,[],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+818,exclusion,"History of intracranial bleeding, confirmed arterio-venous malformation,aneurysm or uncontrolled coagulopathy",not excluded,excluded,[],[1],"```json
+{
+  ""label"": ""excluded"",
+  ""evidence_sentence_ids"": [1]
+}
+```"
+819,exclusion,"Pre-existing neurological disorders or intracranial disease, e.g. multiple sclerosis",not excluded,not applicable,[],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+820,exclusion,Subjects with left ventricular aneurysm or akinesis,not excluded,not applicable,[],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+821,exclusion,Subjects with atrial fibrillation/atrial flutter (chronic or intermittent),not excluded,excluded,"[3, 4]",[3],"```json
+{
+  ""label"": ""excluded"",
+  ""evidence_sentence_ids"": [3]
+}
+```"
+822,exclusion,"Subjects with another source of right to left shunt identified at baseline, including an atrial septal defect and/or fenestrated septum",not excluded,not applicable,[],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+823,exclusion,Subjects who could not undergo the TEE examination,not excluded,excluded,[2],[3],"```json
+{
+  ""label"": ""excluded"",
+  ""evidence_sentence_ids"": [3]
+}
+```"
+824,exclusion,Subjects with contraindication to aspirin or Clopidogrel therapy,not excluded,not applicable,[],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+825,exclusion,Pregnant or desire to become pregnant within the next year,not excluded,not applicable,[0],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+826,exclusion,Subjects who have a underlying malignancy,not excluded,not applicable,[],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+929,inclusion,At least 18 years of age,included,not applicable,[0],[],"{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}"
+932,inclusion,Suspected drug resistance (drug susceptible allowed at the NIH CC),not enough information,not applicable,[0],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+933,inclusion,Available to provide at least 3 sputa over 2 or more days,not enough information,included,[0],"[0, 1, 2, 3]","```json
+{
+  ""label"": ""included"",
+  ""evidence_sentence_ids"": [0, 1, 2, 3]
+}
+```"
+934,inclusion,Taking anti-tuberculosis medicines (or NTM meds at NIH CC) during the time sputa are provided,not included,included,[],"[1, 2, 3, 4]","```json
+{
+  ""label"": ""included"",
+  ""evidence_sentence_ids"": [1, 2, 3, 4]
+}
+```"
+935,inclusion,Thought likely to be Mycobacterium culture positive (including NTM infected for the NIH CC) by enrolling physician,not included,included,[3],[3],"{
+  ""label"": ""included"",
+  ""evidence_sentence_ids"": [3]
+}"
+936,inclusion,GeneXpert MTB/RIF sputum TBpositive (China subjects only),not enough information,included,[],[3],"```json
+{
+  ""label"": ""included"",
+  ""evidence_sentence_ids"": [3]
+}
+```"
+937,inclusion,Likely able to produce sputum samples while on study,not enough information,included,[0],"[0, 1, 2, 3]","```json
+{
+  ""label"": ""included"",
+  ""evidence_sentence_ids"": [0, 1, 2, 3]
+}
+```"
+940,exclusion,Acute liver or kidney disease,not excluded,not applicable,[],[],"{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}"
+941,exclusion,Conditions which compromise the subject s ability to take or absorb oral drugs,not excluded,not applicable,[4],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+943,inclusion,"The patient has a diagnosis of proven or probable invasive aspergillosis and with positive Aspergillus GM index (≥0.5 ng/ml) provide the patient is not receiving antibiotics, such as piperacillin-tazobactam, that are known to cause false positive GMI",not enough information,not applicable,[3],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+944,inclusion,The patient is 18 years of age or older.,included,not applicable,[0],[],"{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}"
+945,exclusion,The patient is being treated with an unlicensed investigational drug for aspergillosis.,not excluded,excluded,[],"[1, 2, 3, 4]","{
+  ""label"": ""excluded"",
+  ""evidence_sentence_ids"": [1, 2, 3, 4]
+}"
+946,exclusion,"The patient has been administered an antifungal agent (voriconazole, itraconazole, posaconazole, caspofungin, micafungin, anidulafungin, amphotericin B, or lipid formulation of amphotericin B) for > 7 days immediately prior to randomization for treatment of the Probable, or Proven invasive aspergill",not excluded,not applicable,[],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+947,exclusion,Patient has invasive aspergillosis but with negative Aspergillus GM index.,not enough information,not applicable,[],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+949,exclusion,"The patient has alkaline phosphatase, ALT, AST or total bilirubin greater than five times the upper limit of normal.",not enough information,not applicable,[],[],"{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}"
+950,exclusion,The patient has hepatic cirrhosis.,not applicable,excluded,[],[1],"{
+  ""label"": ""excluded"",
+  ""evidence_sentence_ids"": [1]
+}"
+951,exclusion,Patients with creatinine > 3 will be enrolled only if able to receive oral voriconazole (specify oral loading dose is 6 mg/kg PO Q 12 hours for 24 hours) then oral maintenance 200 mg PO q 12 hours).,not enough information,not applicable,[],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+952,exclusion,"The patient is on artificial ventilation, and unlikely to be extubated within 24 hours of study entry.",not excluded,not applicable,[],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+953,exclusion,"The patient has a history of allergy, hypersensitivity, or any serious reaction to the azole or echinocandin class of antifungal agents.",not excluded,not applicable,[],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+954,exclusion,The patient has previously enrolled into this study.,not applicable,excluded,[],[1],"{
+  ""label"": ""excluded"",
+  ""evidence_sentence_ids"": [1]
+}"
+955,exclusion,"The patient has a concomitant medical condition, which in the opinion of the Investigator may create an unacceptable additional risk.",not excluded,not applicable,[],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+956,exclusion,The patient has an active microbiologically-documented deep infection due to a non-Aspergillus mold.,not excluded,excluded,[3],"[1, 2, 3, 4]","```json
+{
+  ""label"": ""excluded"",
+  ""evidence_sentence_ids"": [1, 2, 3, 4]
+}
+```"
+957,exclusion,The patient has a life expectancy of less than seven days.,not excluded,not applicable,[],[],"{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}"
