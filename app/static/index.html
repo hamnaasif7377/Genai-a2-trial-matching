@@ -1,0 +1,174 @@
+﻿<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Trial eligibility screening - educational prototype</title>
+<style>
+:root{--bg:#f6f7f9;--fg:#1c2330;--card:#fff;--bd:#d9dee7;--ac:#2456c6;--ok:#17803d;--bad:#b3261e;--warn:#9a6700;--mut:#657085}
+@media (prefers-color-scheme:dark){:root{--bg:#12151b;--fg:#e6e9ef;--card:#1b2029;--bd:#2c3442;--ac:#7aa2ff;--ok:#5fd08a;--bad:#ff8a80;--warn:#e3b341;--mut:#97a1b3}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:14px/1.45 system-ui,Segoe UI,Arial,sans-serif}
+.banner{background:#fff4d6;color:#5c4400;border-bottom:2px solid #e0b84c;padding:8px 16px;font-weight:600;text-align:center}
+header{display:flex;align-items:center;gap:12px;padding:12px 16px;flex-wrap:wrap}h1{font-size:20px;margin:0}
+nav{display:flex;gap:4px;padding:0 16px;border-bottom:1px solid var(--bd);flex-wrap:wrap}
+.tab{border:0;background:none;color:var(--fg);padding:10px 14px;cursor:pointer;border-bottom:3px solid transparent;font-size:14px}
+.tab.active{border-color:var(--ac);font-weight:600}
+main{padding:16px;max-width:1300px;margin:auto}
+.panel,.card{background:var(--card);border:1px solid var(--bd);border-radius:8px;padding:12px;margin-bottom:12px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}@media(max-width:900px){.grid2{grid-template-columns:1fr}}
+textarea,select,input[type=number],input[type=text]{width:100%;background:var(--bg);color:var(--fg);border:1px solid var(--bd);border-radius:6px;padding:8px;font:inherit}
+textarea{resize:vertical;font-family:ui-monospace,Consolas,monospace;font-size:13px}
+label{display:block;font-weight:600;margin:8px 0 4px}.row{display:flex;gap:10px;align-items:center;flex-wrap:wrap}.row>*{flex:0 0 auto}.row input[type=number]{width:80px}
+button.primary{background:var(--ac);color:#fff;border:0;border-radius:6px;padding:9px 18px;font-size:14px;cursor:pointer}
+button:disabled{opacity:.5;cursor:not-allowed}a.btn{color:var(--ac);margin-right:12px}
+.chip{display:inline-block;border-radius:12px;padding:2px 10px;font-size:12px;font-weight:600;border:1px solid var(--bd)}
+.chip.ok,.chip.good{color:var(--ok);border-color:var(--ok)}.chip.bad,.chip.badl{color:var(--bad);border-color:var(--bad)}
+.chip.warn,.chip.warnl{color:var(--warn);border-color:var(--warn)}.chip.neutral{color:var(--mut)}
+.badge{font-size:11px;text-transform:uppercase;letter-spacing:.04em;padding:2px 6px;border-radius:4px;background:var(--bd)}
+.muted{color:var(--mut)}.crit{font-weight:600;margin:6px 0}.ev{margin:4px 0;padding-left:18px}
+.flag{color:var(--warn);margin:4px 0}.error{background:#fde7e5;color:#8a1c14;border:1px solid #e5a29c;border-radius:6px;padding:10px;margin-bottom:12px}
+.card{cursor:pointer}.card.sel{outline:2px solid var(--ac)}.sent{padding:3px 6px;border-radius:4px}.sent.hl{background:#fff2a8;color:#222}
+.sticky{position:sticky;top:8px;align-self:start}pre{white-space:pre-wrap;background:var(--bg);padding:8px;border-radius:6px;margin:6px 0}
+.progress{height:8px;background:var(--bd);border-radius:4px;overflow:hidden}.progress div{height:100%;background:var(--ac)}
+table{border-collapse:collapse;width:100%;margin:8px 0;font-size:13px;background:var(--card)}td,th{border:1px solid var(--bd);padding:6px;text-align:left;vertical-align:top}th{background:var(--bg)}
+.bar{height:6px;background:var(--bd);border-radius:3px;margin-top:3px}.bar span{display:block;height:100%;background:var(--ac);border-radius:3px}
+.outcome{font-size:20px;font-weight:700;margin:4px 0}.tablewrap{overflow-x:auto}h3{margin:18px 0 4px}
+</style></head><body>
+<div class="banner">&#9888; Educational screening prototype. Not a clinical enrollment decision. Outputs may be wrong and must be reviewed by a qualified person.</div>
+<header><h1>Clinical trial eligibility screening</h1><span id="status" class="chip warn">Connecting...</span></header>
+<nav>
+<button class="tab active" data-tab="screen">Screening</button><button class="tab" data-tab="bench">Decoding benchmark</button>
+<button class="tab" data-tab="exp">Experiments</button><button class="tab" data-tab="about">About</button></nav>
+<main>
+<section id="tab-screen">
+<div id="err" class="error" hidden></div>
+<div class="grid2">
+<div class="panel"><label>Example</label><select id="sample"></select>
+<label>Patient note (numbered 0., 1., ... or plain text; plain text is split into sentences automatically)</label>
+<textarea id="note" rows="13" placeholder="Paste a patient description here"></textarea></div>
+<div class="panel"><label>Trial criteria (headers, then one criterion per line)</label>
+<textarea id="criteria" rows="17" placeholder="Inclusion criteria:&#10;- ...&#10;Exclusion criteria:&#10;- ..."></textarea></div></div>
+<div class="panel row"><label style="margin:0">Decoding</label>
+<select id="mode" style="width:auto"><option value="cached">KV-cached (own decoder, default)</option><option value="nocache">Uncached reference (slow)</option><option value="speculative">Speculative (draft 0.5B + target 1.5B)</option></select>
+<label style="margin:0">k</label><input type="number" id="k" value="4" min="1" max="8">
+<button id="runBtn" class="primary needs-model" disabled>Run screening</button></div>
+<div id="results"></div></section>
+
+<section id="tab-bench" hidden>
+<div id="berr" class="error" hidden></div>
+<div class="panel"><p class="muted">Runs ONE criterion through the three decoding paths on this machine and compares them. All paths are greedy, so the generated tokens should be identical. The uncached path recomputes the whole prompt for every token and can take minutes on CPU.</p>
+<label>Patient note</label><textarea id="bnote" rows="7"></textarea>
+<div class="row"><div style="flex:0 0 150px"><label>Criterion type</label><select id="btype"><option>exclusion</option><option>inclusion</option></select></div>
+<div style="flex:1 1 300px"><label>Criterion</label><input type="text" id="bcrit"></div>
+<div><label>Max new tokens</label><input type="number" id="bmax" value="16" min="4" max="64"></div><div><label>k</label><input type="number" id="bk" value="4" min="1" max="8"></div></div>
+<div class="row" style="margin-top:8px"><label style="margin:0"><input type="checkbox" id="bnc" checked> include uncached reference</label>
+<label style="margin:0"><input type="checkbox" id="bsp" checked> include speculative</label>
+<button id="benchBtn" class="primary needs-model" disabled>Run benchmark</button></div></div>
+<div id="benchOut"></div></section>
+
+<section id="tab-exp" hidden><div id="expOut" class="muted">Loading...</div>
+<h3>Live attention check (runs here, on this machine)</h3><div class="panel row">
+<label style="margin:0">Sequence length</label><input type="number" id="aL" value="512" min="16" max="2048">
+<label style="margin:0">Block size</label><input type="number" id="aB" value="64" min="8" max="256">
+<label style="margin:0"><input type="checkbox" id="aC" checked> causal</label><button id="attBtn" class="primary">Run</button></div>
+<div id="aerr" class="error" hidden></div><div id="attOut"></div></section>
+
+<section id="tab-about" hidden><div class="panel">
+<h3 style="margin-top:0">What this is</h3><p>A research prototype for criterion-level clinical trial eligibility screening. A Qwen2.5-1.5B-Instruct model fine-tuned with LoRA on the TrialGPT criterion annotations (37 training patients) predicts, for each criterion, a label (included / not included / excluded / not excluded / not enough information / not applicable) and the supporting sentence IDs. Explanations are built from the cited sentences, never invented.</p>
+<h3>Overall outcome</h3><p id="rule" class="muted"></p>
+<h3>Decoding paths</h3><p>Uncached greedy reference, KV-cached greedy decoder (explicit cache, position ids and mask) and greedy speculative decoding with a fine-tuned 0.5B draft. All three are implemented in this repository and do not call <code>generate()</code>.</p>
+<h3>Known limitations</h3><ul><li>Rare labels (not included, excluded) are rarely predicted correctly.</li><li>Missing information is often mistaken for &quot;not excluded&quot;; decisions without cited evidence are flagged.</li><li>Trained on short notes (max 562 tokens). Plain-text notes are split with a simple rule that can mis-split abbreviations.</li><li>CPU inference is slow: roughly 10-60 s per criterion depending on the machine.</li></ul></div></section>
+</main>
+<script>
+const $=s=>document.querySelector(s);
+const esc=s=>String(s==null?"":s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const fmt=v=>(v==null||isNaN(v))?"-":(+v).toFixed(2);
+let busy=false,ready=false,lastCrit=[],sel=-1,samples=[];
+async function api(p,o){const r=await fetch(p,o);let d=null;try{d=await r.json();}catch(e){}
+ if(!r.ok){const x=d&&d.detail;throw new Error(typeof x==="string"?x:(Array.isArray(x)?x.map(y=>y.msg).join("; "):"Request failed ("+r.status+")"));}return d;}
+const post=(p,b)=>api(p,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(b)});
+function setBusy(b){busy=b;document.querySelectorAll(".needs-model").forEach(x=>x.disabled=b||!ready);$("#attBtn").disabled=b;}
+function showErr(m,id){const e=$("#"+(id||"err"));e.textContent=m;e.hidden=false;e.scrollIntoView({block:"nearest"});}
+function clearErr(){document.querySelectorAll(".error").forEach(e=>e.hidden=true);}
+async function runJob(path,body,upd){const r=await post(path,body);
+ while(true){const j=await api("/api/jobs/"+r.job_id);upd(j);if(j.status==="done"||j.status==="error")return j;await new Promise(z=>setTimeout(z,1000));}}
+document.querySelectorAll(".tab").forEach(b=>b.onclick=()=>{
+ document.querySelectorAll(".tab").forEach(x=>x.classList.toggle("active",x===b));
+ document.querySelectorAll("main>section").forEach(s=>s.hidden=s.id!=="tab-"+b.dataset.tab);
+ if(b.dataset.tab==="exp")loadStored();if(b.dataset.tab==="bench")prefillBench();});
+async function pollStatus(){
+ try{const s=await api("/api/status");ready=s.status==="ready";const c=$("#status");
+  c.className="chip "+(ready?"ok":s.status==="error"?"bad":"warn");
+  c.textContent=ready?("Model ready ("+s.device+", "+s.threads+" threads)"):(s.status==="error"?("Model error: "+s.error):"Loading model (first start downloads about 3 GB)...");
+  const sp=$("#mode").querySelector('option[value="speculative"]');sp.textContent="Speculative (draft 0.5B + target 1.5B)"+(s.draft_adapter_found?"":" - draft adapter missing, untuned draft");
+ }catch(e){$("#status").className="chip bad";$("#status").textContent="Server unreachable";ready=false;}
+ setBusy(busy);setTimeout(pollStatus,ready?15000:2000);}
+async function loadSamples(){try{samples=await api("/api/samples");}catch(e){samples=[];}
+ $("#sample").innerHTML='<option value="">- paste your own, or pick an example -</option>'+samples.map((s,i)=>`<option value="${i}">${esc(s.name)}</option>`).join("");}
+$("#sample").onchange=e=>{const s=samples[e.target.value];if(s){$("#note").value=s.note;$("#criteria").value=s.criteria;}};
+function labelClass(r){if(!r.label_valid)return"badl";return{"included":"good","not excluded":"good","not included":"badl","excluded":"badl","not enough information":"warnl"}[r.label]||"neutral";}
+function cardHtml(r,i){
+ const ev=r.evidence.length?`<ul class="ev">${r.evidence.map(e=>`<li><b>[${e.id}]</b> ${esc(e.text)}</li>`).join("")}</ul>`:`<p class="muted">No evidence sentence cited.</p>`;
+ const fl=r.flags.map(f=>`<div class="flag">\u26A0 ${esc(f)}</div>`).join("");
+ return `<div class="card${i===sel?" sel":""}" onclick="selectCard(${i})"><div class="row"><span class="badge">${esc(r.type)}</span>
+ <span class="chip ${labelClass(r)}">${esc(r.label_valid?r.label:"invalid output")}</span><span class="muted">${fmt(r.seconds)} s, ${r.new_tokens} tokens</span></div>
+ <p class="crit">${esc(r.criterion)}</p>${ev}<p>${esc(r.explanation)}</p>${fl}<details><summary>Raw model output</summary><pre>${esc(r.raw_output)}</pre></details></div>`;}
+function noteHtml(m){if(!m||!m.sentences)return"";
+ return `<div class="panel"><b>Patient note</b>${m.note_auto_numbered?' <span class="muted">(split into sentences automatically)</span>':""}
+ ${m.sentences.map((s,i)=>`<div class="sent" id="s-${i}"><b>${i}.</b> ${esc(s)}</div>`).join("")}<p class="muted">Click a criterion to highlight its cited sentences.</p></div>`;}
+function selectCard(i){sel=i;document.querySelectorAll(".card").forEach((c,j)=>c.classList.toggle("sel",j===i));
+ document.querySelectorAll(".sent").forEach(s=>s.classList.remove("hl"));
+ ((lastCrit[i]||{}).evidence_ids||[]).forEach(id=>{const e=$("#s-"+id);if(e)e.classList.add("hl");});}
+function renderScreen(j){
+ lastCrit=(j.result?j.result.criteria:j.partial)||[];let h="";
+ if(j.status!=="done"&&j.status!=="error")h+=`<div class="progress"><div style="width:${100*j.progress/Math.max(j.total,1)}%"></div></div><p class="muted">${esc(j.message)} (${j.progress}/${j.total})</p>`;
+ if(j.result){const o=j.result.overall,id=j.id;
+  h+=`<div class="panel"><div class="outcome">Preliminary outcome: ${esc(o.outcome)}</div><ul>${o.reasons.map(x=>`<li>${esc(x)}</li>`).join("")}</ul>
+  <p class="muted">${esc(o.rule)}</p><p>Counts: ${Object.entries(o.counts).map(([k,v])=>esc(k)+": "+v).join(" | ")} &middot; total ${fmt(j.result.total_seconds)} s &middot; mode ${esc(j.meta.decoding_mode)}</p>
+  <a class="btn" target="_blank" href="/api/report/${id}?format=html">Open report</a><a class="btn" href="/api/report/${id}?format=html&download=1">Download HTML report</a><a class="btn" href="/api/report/${id}?format=json&download=1">Download JSON</a>
+  <span class="muted">Saved on the server in the reports folder. Open the report and print it to PDF if needed.</span></div>`;}
+ h+=`<div class="grid2"><div>${lastCrit.map(cardHtml).join("")}</div><div class="sticky">${noteHtml(j.meta)}</div></div>`;
+ $("#results").innerHTML=h;if(sel>=0)selectCard(sel);}
+$("#runBtn").onclick=async()=>{clearErr();const note=$("#note").value,crit=$("#criteria").value;
+ if(!note.trim())return showErr("Please paste a patient note first.");if(!crit.trim())return showErr("Please enter the trial criteria first.");
+ setBusy(true);sel=-1;$("#results").innerHTML="";
+ try{const j=await runJob("/api/screen",{note:note,criteria_text:crit,mode:$("#mode").value,k:+$("#k").value||4},renderScreen);if(j.status==="error")showErr(j.error);}
+ catch(e){showErr(e.message);}finally{setBusy(false);}};
+function prefillBench(){if(!$("#bnote").value)$("#bnote").value=$("#note").value;
+ if(!$("#bcrit").value){const l=$("#criteria").value.split("\n").map(x=>x.trim()).filter(x=>x&&!/criteria\s*:?\s*$/i.test(x))[0]||"";$("#bcrit").value=l.replace(/^(?:[-*]|\d+[.)])\s+/,"");}}
+function renderBench(j){const r=j.result||{rows:j.partial};const rows=r.rows||[];let h="";
+ if(j.status!=="done"&&j.status!=="error")h+=`<p class="muted">${esc(j.message)} (${j.progress}/${j.total})</p>`;
+ if(rows.length){const mx=Math.max(...rows.map(x=>x.total_s));
+  h+=`<div class="tablewrap"><table><tr><th>Mode</th><th>Tokens</th><th>Prefill s</th><th>Decode s</th><th>Total s</th><th>Tokens/s</th><th>Speedup vs uncached</th><th>Speedup vs cached</th><th>Same tokens as cached</th><th>Details</th></tr>`+
+  rows.map(x=>`<tr><td>${esc(x.label)}</td><td>${x.tokens}</td><td>${fmt(x.prefill_s)}</td><td>${fmt(x.decode_s)}</td><td>${fmt(x.total_s)}<div class="bar"><span style="width:${100*x.total_s/mx}%"></span></div></td><td>${fmt(x.tok_per_s)}</td><td>${fmt(x.speedup_vs_nocache)}</td><td>${fmt(x.speedup_vs_cached)}</td><td>${x.identical_to_cached==null?"-":(x.identical_to_cached?"yes":"NO")}</td><td>${esc(x.details||"")}</td></tr>`).join("")+`</table></div>`;
+  const c=rows.find(x=>x.text);if(c)h+=`<p>Generated output: <code>${esc(c.text)}</code></p>`;}
+ if(j.result)h+=`<p class="muted">Prompt ${r.prompt_tokens} tokens, up to ${r.max_new} new, ${esc(r.device)} (${r.threads} threads). Analytic KV-cache size for this sequence: ${fmt(r.kv_cache_MB_analytic)} MB. On CPU, decoding is memory-bound, so results differ from the T4 GPU numbers in the Experiments tab.</p>`;
+ $("#benchOut").innerHTML=h;}
+$("#benchBtn").onclick=async()=>{clearErr();setBusy(true);$("#benchOut").innerHTML="";
+ try{const j=await runJob("/api/benchmark",{note:$("#bnote").value,criterion_type:$("#btype").value,criterion_text:$("#bcrit").value,max_new:+$("#bmax").value||16,k:+$("#bk").value||4,include_nocache:$("#bnc").checked,include_speculative:$("#bsp").checked},renderBench);
+  if(j.status==="error")showErr(j.error,"berr");}catch(e){showErr(e.message,"berr");}finally{setBusy(false);}};
+$("#attBtn").onclick=async()=>{clearErr();setBusy(true);$("#attOut").innerHTML="";
+ try{const j=await runJob("/api/attention",{L:+$("#aL").value,block:+$("#aB").value,causal:$("#aC").checked,H:4,D:64},j=>{if(j.status!=="done")$("#attOut").innerHTML=`<p class="muted">${esc(j.message)}</p>`;});
+  if(j.status==="error")return showErr(j.error,"aerr");const r=j.result;
+  $("#attOut").innerHTML=`<div class="tablewrap"><table><tr><th>Implementation</th><th>Median ms</th><th>Score buffer (MB, analytic)</th></tr>
+  <tr><td>Reference (full L x L scores)</td><td>${fmt(r.ms.reference)}</td><td>${fmt(r.score_buffer_MB.reference)}</td></tr>
+  <tr><td>Tiled online-softmax (block ${r.block})</td><td>${fmt(r.ms.tiled)}</td><td>${fmt(r.score_buffer_MB.tiled)}</td></tr>
+  <tr><td>torch SDPA (fused)</td><td>${fmt(r.ms.torch_sdpa)}</td><td>-</td></tr></table></div>
+  <p>Tiled vs reference: max abs error ${r.max_abs_err.toExponential(2)}, mean ${r.mean_abs_err.toExponential(2)}. SDPA vs reference max error ${r.sdpa_vs_reference_max_err.toExponential(2)}. (L=${r.L}, ${r.H} heads, head dim ${r.D}, causal=${r.causal}, float32)</p>`;}
+ catch(e){showErr(e.message,"aerr");}finally{setBusy(false);}};
+async function loadStored(){let d;try{d=await api("/api/stored");}catch(e){$("#expOut").textContent=e.message;return;}let h="";
+ const T=[["zeroshot_test_metrics","Zero-shot, naive prompt"],["zeroshot_hint_test_metrics","Zero-shot, labels listed in prompt"],["lora_r16_v1_test_metrics","Fine-tuned LoRA"]].filter(x=>d[x[0]]);
+ if(T.length)h+=`<h3>Held-out test split (8 patients, 206 criterion records, greedy decoding)</h3><div class="tablewrap"><table><tr><th>Model</th><th>Accuracy</th><th>Macro-F1</th><th>Inclusion acc.</th><th>Exclusion acc.</th><th>Evidence macro-F1</th></tr>`+
+  T.map(([k,n])=>{const m=d[k];return`<tr><td>${n}</td><td>${fmt(m.overall.label.accuracy)}</td><td>${fmt(m.overall.label.macro_f1)}</td><td>${fmt(m.inclusion.label.accuracy)}</td><td>${fmt(m.exclusion.label.accuracy)}</td><td>${fmt(m.overall.evidence.macro_f1)}</td></tr>`;}).join("")+`</table></div>`;
+ const kv=d.kv_bench_gpu_fp16;
+ if(kv)h+=`<h3>KV cache vs no cache (T4 GPU, fp16)</h3><p class="muted">Token-identical to the uncached reference: ${esc(kv.token_identical)} in fp16${d.kv_fp32_correctness?"; "+esc(d.kv_fp32_correctness.token_identical)+" in fp32":""}. The fp16 mismatches are near-ties (top-2 logit gap 0.0156).</p><div class="tablewrap"><table><tr><th>Input tokens</th><th>New tokens</th><th>Uncached decode tok/s</th><th>Cached decode tok/s</th><th>End-to-end speedup</th></tr>`+
+  kv.benchmark.map(b=>`<tr><td>${b.input_len}</td><td>${b.new_tokens}</td><td>${fmt(b.nocache.decode_tok_per_s)}</td><td>${fmt(b.cached.decode_tok_per_s)}</td><td>${fmt(b.speedup_total)}x</td></tr>`).join("")+`</table></div>`;
+ [["spec_ftdraft_fp16","Speculative decoding: fine-tuned draft, fp16"],["spec_basedraft_fp16","Speculative decoding: untuned draft, fp16"],["spec_ftdraft_fp32","Speculative decoding: fine-tuned draft, fp32"]].forEach(([k,n])=>{const s=d[k];if(!s)return;
+  h+=`<h3>${n}</h3><p class="muted">Cached greedy baseline: ${fmt(s.baseline.tok_per_s)} tok/s. Every output was compared with plain greedy decoding.</p><div class="tablewrap"><table><tr><th>k</th><th>Identical outputs</th><th>Acceptance</th><th>Tokens per round</th><th>Tokens/s</th><th>Speedup vs greedy</th></tr>`+
+  s.spec.map(x=>`<tr><td>${x.k}</td><td>${esc(x.identical)}</td><td>${fmt(x.acceptance_rate)}</td><td>${fmt(x.tokens_per_round)}</td><td>${fmt(x.tok_per_s)}</td><td>${fmt(x.speedup_vs_greedy)}x</td></tr>`).join("")+`</table></div>`;});
+ const ag=d.attention_bench_gpu;
+ if(ag){const by={};ag.rows.forEach(r=>{(by[r.L]=by[r.L]||{})[r.impl]=r;});
+  h+=`<h3>Attention benchmark (T4 GPU, float32, causal)</h3>`+(d.attention_tests?`<p class="muted">Correctness: ${d.attention_tests.all_pass?"all":"NOT all"} ${d.attention_tests.n_cases} test cases passed; max float64 error ${(+d.attention_tests.max_err_float64).toExponential(1)}; causality check ${d.attention_tests.causality_ok?"passed":"FAILED"}.</p>`:"")+
+  `<div class="tablewrap"><table><tr><th>L</th><th>Reference ms</th><th>Tiled ms</th><th>SDPA ms</th><th>Reference peak MB</th><th>Tiled peak MB</th><th>SDPA peak MB</th></tr>`+
+  Object.keys(by).map(L=>{const b=by[L];return`<tr><td>${L}</td><td>${fmt(b.reference.median_ms)}</td><td>${fmt(b.tiled.median_ms)}</td><td>${fmt(b.torch_sdpa.median_ms)}</td><td>${fmt(b.reference.peak_extra_mem_MB)}</td><td>${fmt(b.tiled.peak_extra_mem_MB)}</td><td>${fmt(b.torch_sdpa.peak_extra_mem_MB)}</td></tr>`;}).join("")+`</table></div>`;}
+ $("#expOut").innerHTML=h||"No stored result files were found in the results folder.";}
+$("#rule").textContent="Each criterion is decided separately. The overall outcome is an explicit rule over those decisions: any failed inclusion or applicable exclusion gives Likely ineligible; otherwise any invalid output gives Needs manual review; otherwise any not-enough-information gives Undetermined; otherwise Preliminarily eligible. It is not a separately labeled ground truth.";
+loadSamples();pollStatus();
+</script></body></html>

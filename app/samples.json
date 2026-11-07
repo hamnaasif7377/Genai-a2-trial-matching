@@ -1,0 +1,8 @@
+﻿[
+ {"name": "Example A - type 2 diabetes trial (unnumbered note, auto-split)",
+  "note": "A 54-year-old woman with type 2 diabetes for 8 years presents for routine follow-up. She takes metformin 1000 mg twice daily and has no history of pancreatitis. Her HbA1c is 8.2% and her BMI is 31 kg/m2. She is a non-smoker and drinks alcohol rarely. Blood pressure is 128/82 mmHg. She is not pregnant and uses an intrauterine device for contraception.",
+  "criteria": "Inclusion criteria:\n- Age between 18 and 75 years\n- Diagnosis of type 2 diabetes mellitus\n- HbA1c between 7.5% and 10%\n- Body mass index above 25 kg/m2\nExclusion criteria:\n- History of pancreatitis\n- Estimated glomerular filtration rate below 45 mL/min\n- Current treatment with insulin\n- Pregnancy or breastfeeding\n- Active malignancy"},
+ {"name": "Example B - stable angina trial (numbered note, male patient)",
+  "note": "0. A 67-year-old man presents with chest pressure that occurs on climbing stairs and resolves within five minutes of rest.\n1. He has a 15-year history of hypertension and hyperlipidemia.\n2. He smoked one pack per day for 30 years and quit five years ago.\n3. He takes aspirin, atorvastatin and lisinopril.\n4. Resting ECG is normal and troponin is negative.\n5. He has no known allergy to nitrates.",
+  "criteria": "Inclusion criteria:\n1. Chronic stable angina\n2. Age over 40 years\n3. Currently taking antihypertensive medication\nExclusion criteria:\n1. Acute myocardial infarction within the last 3 months\n2. Use of phosphodiesterase inhibitors\n3. Pregnant women\n4. Left ventricular ejection fraction below 30%"}
+]

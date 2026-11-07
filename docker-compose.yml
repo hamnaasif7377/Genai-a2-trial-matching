@@ -1,0 +1,16 @@
+﻿services:
+  app:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      ADAPTER_PATH: /models/lora_r16_v1/final_adapter
+      DRAFT_ADAPTER_PATH: /models/lora_draft_0p5b_v1/final_adapter
+      HF_HOME: /hf
+      REPORT_DIR: /reports
+    volumes:
+      - ../adapter:/models:ro
+      - hfcache:/hf
+      - ./reports:/reports
+volumes:
+  hfcache:

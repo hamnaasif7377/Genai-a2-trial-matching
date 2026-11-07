@@ -1,0 +1,8 @@
+﻿fastapi
+uvicorn
+pydantic
+transformers
+peft
+accelerate
+psutil
+numpy
