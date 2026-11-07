@@ -13,6 +13,13 @@ from transformers import DynamicCache
 from src.inference.kv_decode import forward_logits
 
 
+def trim_cache(cache, length):
+    cur = cache.get_seq_length()
+    if cur > length:
+        cache.crop(length - cur)   # newer transformers: negative = tokens to remove
+
+
+
 @torch.no_grad()
 def speculative_greedy(target, draft, prompt_ids, max_new, k, eos_id, ignore_eos=False):
     dev = prompt_ids.device
@@ -46,11 +53,12 @@ def speculative_greedy(target, draft, prompt_ids, max_new, k, eos_id, ignore_eos
         seq.extend(new)
         st["rounds"] += 1; st["drafted"] += kk; st["accepted"] += m
         if not done:
-            tc.crop(n + m)                                # target keeps pending + accepted drafts
+            trim_cache(tc, n + m)                                # target keeps pending + accepted drafts
             dl, want = dc.get_seq_length(), n + m
             if dl > want:
-                dc.crop(want)                             # rejection: drop draft tokens past the match
+                trim_cache(dc, want)                             # rejection: drop draft tokens past the match
             elif dl < want:                               # full acceptance: d_k was never fed to the draft
                 forward_logits(draft, torch.tensor([seq[dl:want]], device=dev), dc, dl, 1)
                 st["draft_fwd"] += 1
     return seq[L0:L0 + max_new], st
+
