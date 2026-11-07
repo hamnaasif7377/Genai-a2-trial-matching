@@ -1,0 +1,963 @@
+annotation_id,type,criterion,gold,pred,gold_ids,pred_ids,raw
+159,inclusion,Age greater than 18 years,included,not applicable,[0],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+161,inclusion,Patients undergoing elective carotid endarterectomy,not included,not applicable,[],[],"{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}"
+162,inclusion,Patients undergoing open abdominal aortic aneurysm repair,not included,not applicable,[],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+163,inclusion,Patients undergoing endovascular abdominal aneurysm repair,not included,included,[],"[0, 1, 2]","```json
+{
+  ""label"": ""included"",
+  ""evidence_sentence_ids"": [0, 1, 2]
+}
+```"
+164,inclusion,Patients undergoing surgical lower limb revascularisation (suprainguinal or infrainguinal),not included,not applicable,[],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+165,exclusion,Pregnancy,not applicable,excluded,[],[1],"{
+  ""label"": ""excluded"",
+  ""evidence_sentence_ids"": [1]
+}"
+166,exclusion,Significant upper limb peripheral arterial disease,not excluded,excluded,[],[1],"{
+  ""label"": ""excluded"",
+  ""evidence_sentence_ids"": [1]
+}"
+167,exclusion,Previous history of upper limb deep vein thrombosis,not excluded,excluded,[],[1],"```json
+{
+  ""label"": ""excluded"",
+  ""evidence_sentence_ids"": [1]
+}
+```"
+168,exclusion,Patients on glibenclamide or nicorandil (these medications may interfere with RIPC),not excluded,excluded,[],[1],"```json
+{
+  ""label"": ""excluded"",
+  ""evidence_sentence_ids"": [1]
+}
+```"
+169,exclusion,Patients with an estimated pre-operative glomerular filtration rate < 30mls/min/1.73m2,not enough information,excluded,[],[1],"```json
+{
+  ""label"": ""excluded"",
+  ""evidence_sentence_ids"": [1]
+}
+```"
+170,exclusion,"Patients with a known history of myocarditis, pericarditis or amyloidosis",not excluded,excluded,[],[1],"```json
+{
+  ""label"": ""excluded"",
+  ""evidence_sentence_ids"": [1]
+}
+```"
+171,exclusion,Patients with severe hepatic disease defined as an international normalised ratio >2 in the absence of systemic anticoagulation,not excluded,excluded,[],[1],"```json
+{
+  ""label"": ""excluded"",
+  ""evidence_sentence_ids"": [1]
+}
+```"
+172,exclusion,"Patients with severe respiratory disease (for the trial, defined as patients requiring home oxygen therapy)",not excluded,excluded,[],[1],"```json
+{
+  ""label"": ""excluded"",
+  ""evidence_sentence_ids"": [1]
+}
+```"
+173,exclusion,Patients previously enrolled in the trial representing for a further procedure,not excluded,excluded,[],[1],"{
+  ""label"": ""excluded"",
+  ""evidence_sentence_ids"": [1]
+}"
+174,exclusion,Patients with previous axillary surgery,not enough information,excluded,[],[1],"{
+  ""label"": ""excluded"",
+  ""evidence_sentence_ids"": [1]
+}"
+175,inclusion,Chronic renal failure requiring hemodialysis.,not enough information,not applicable,[],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+176,inclusion,No medical history of central vena catheterization.,included,not applicable,[0],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+177,inclusion,Maintenance hemodialysis after central vena catheterization.,not included,not applicable,[],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+179,exclusion,Had been performed central venous puncture or catheterization before.,not excluded,excluded,[0],[1],"```json
+{
+  ""label"": ""excluded"",
+  ""evidence_sentence_ids"": [1]
+}
+```"
+180,exclusion,Can not use heparin.,not excluded,excluded,[],[1],"{
+  ""label"": ""excluded"",
+  ""evidence_sentence_ids"": [1]
+}"
+181,exclusion,Refused to sign the informed consent.,not excluded,excluded,[3],[1],"{
+  ""label"": ""excluded"",
+  ""evidence_sentence_ids"": [1]
+}"
+182,exclusion,Advanced cancer patients.,not excluded,excluded,[],[1],"{
+  ""label"": ""excluded"",
+  ""evidence_sentence_ids"": [1]
+}"
+183,exclusion,With or will take arteriovenous fistula surgery in right arm.,not excluded,excluded,[],[1],"{
+  ""label"": ""excluded"",
+  ""evidence_sentence_ids"": [1]
+}"
+184,exclusion,Other inappropriate situation,not excluded,excluded,[],[1],"{
+  ""label"": ""excluded"",
+  ""evidence_sentence_ids"": [1]
+}"
+187,inclusion,A respiratory rate of at least 20/min or a PaCO2 of 32mmHg or lower or the use of mechanical ventilation;,included,not applicable,[2],[],"{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}"
+188,inclusion,"The use of vasopressors to maintain a systolic blood pressure of at least 90mmHg despite fluid resuscitation, low dose of dopamine (≤ 5 μg/kg per minute), or dobutamine;",not included,not applicable,[3],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+189,inclusion,"at least 1 of 3 signs of hypoperfusion (urine output < 0.5mL/kg of body weight per hour for 1 hour or more; neurologic dysfunction defined by confusion, psychosis, or a Glasgow coma scale score of ≤ 6; plasma lactate higher than the upper limit of the normal value).",not enough information,not applicable,[],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+190,inclusion,"the presence of acute decrease in PaO2/FIO2 to 200mmHg or lower,",not enough information,not applicable,[],[],"{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}"
+191,inclusion,bilateral pulmonary infiltrates or a chest radiograph consistent with edema;,not enough information,not applicable,[],[],"{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}"
+192,inclusion,no clinical evidence of left atrial hypertension; and requirement for positive pressure ventilation.,not enough information,not applicable,[],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+193,exclusion,Patients were moribund.,not enough information,not applicable,"[0, 1, 2, 3, 4]",[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+194,exclusion,signed do-not-resuscitation odor.,not excluded,not applicable,[],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+196,exclusion,Less than 18 years of age,not excluded,not applicable,[0],[],"{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}"
+197,exclusion,Decreased level of consciousness,not excluded,not applicable,"[0, 5]",[],"{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}"
+198,exclusion,Inability to answer questions,not excluded,not applicable,[5],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+199,exclusion,Prisoner,not excluded,not applicable,[],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+304,inclusion,Patients of both sexes aged ≥ 18 years.,included,not applicable,[0],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+305,inclusion,"Standard analytical parameters, defined by: Leukocytes ≥ 3000 Neutrophils ≥ 1500 Platelets ≥ 100,000 Aspartate aminotransferase (AST) / Alanine aminotransferase (ALT) ≤ 1.5 standard range institution creatinine ≤ 1.5 mg / dl",not enough information,not applicable,[],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+306,inclusion,Patients with liver space occupying lesion (LOE) that require extended hepatic resection.,not enough information,not applicable,[3],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+307,inclusion,"Patient selection should be cautious, covering basically 5 types of liver damage which must be submitted prior to liver volumetry: Metastatic Disease subsidiary right hepatectomy extended to segment IV Metastatic Disease subsidiary right hepatectomy with suspected diseased liver (neoadjuvant chemoth",not enough information,not applicable,[3],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+309,exclusion,Different tumor records current disease or any disease hematologic.,not excluded,not applicable,[],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+310,exclusion,Patients with uncontrolled hypertension.,not excluded,not applicable,[],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+311,exclusion,Severe heart failure (NYHA IV).,not excluded,not applicable,[],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+312,exclusion,Patients with malignant ventricular arrhythmias or unstable angina.,not excluded,not applicable,[],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+313,exclusion,Diagnosis of deep vein thrombosis in the previous 3 months.,not excluded,not applicable,[],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+314,exclusion,"Adjunctive therapy including hyperbaric oxygen, vasoactive substances, agents or angiogenesis inhibitors against Cox-II.",not excluded,not applicable,[],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+315,exclusion,BMI> 40 kg/m2.,not enough information,not applicable,[],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+316,exclusion,Patients with alcoholic with active alcoholism.,not excluded,not applicable,[],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+317,exclusion,Proliferative retinopathy.,not excluded,not applicable,[],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+318,exclusion,Concomitant disease that reduces life expectancy to less than a year.,not excluded,not applicable,[],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+319,exclusion,Difficulty in monitoring.,not excluded,not applicable,[5],[],"{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}"
+320,exclusion,Heart failure or ejection fraction (EF) <30%.,not excluded,not applicable,[],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+321,exclusion,Stroke or myocardial infarction within the last 3 months.,not excluded,not applicable,[],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+322,exclusion,Pregnant women or women of childbearing age who do not have adequate contraception.,not excluded,excluded,[0],[5],"```json
+{
+  ""label"": ""excluded"",
+  ""evidence_sentence_ids"": [5]
+}
+```"
+323,inclusion,Immune Deficiency and early BMF in childhood,not enough information,not applicable,[0],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+325,inclusion,Genetic patients,not enough information,included,[],"[0, 1, 2, 3, 4, 5]","{
+  ""label"": ""included"",
+  ""evidence_sentence_ids"": [0, 1, 2, 3, 4, 5]
+}"
+326,exclusion,Refusal to consent.,not excluded,excluded,[5],"[0, 1, 2, 3, 4]","{
+  ""label"": ""excluded"",
+  ""evidence_sentence_ids"": [0, 1, 2, 3, 4]
+}"
+381,inclusion,Age > 18 years at the time of signing the informed consent form,included,not applicable,[0],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+384,inclusion,Laboratory values as follows Hemoglobin ≥ 100 g/L Absolute neutrophil count ≥ 1.0 x 109/L Total bilirubin ≤ 1.5 x upper limit of normal (ULN) AST (SGOT) / ALT (SGPT) ≤ 2.5 x ULN,not enough information,included,[],"[1, 2, 3]","```json
+{
+  ""label"": ""included"",
+  ""evidence_sentence_ids"": [1, 2, 3]
+}
+```"
+385,inclusion,Ability to take and retain oral medication,included,not applicable,[4],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+388,exclusion,"Active severe SLE flare with central nervous system (CNS) manifestations, active renal lupus, systemic vasculitis, active pericarditis, active pleuritis, active peritonitis or other SLE manifestations requiring treatment not allowed by the study protocol.",not excluded,excluded,"[0, 1, 2, 3]","[1, 2, 3, 4]","```json
+{
+  ""label"": ""excluded"",
+  ""evidence_sentence_ids"": [1, 2, 3, 4]
+}
+```"
+389,exclusion,Severe renal impairment (estimated or measured GFR <50%),not enough information,excluded,[],[1],"{
+  ""label"": ""excluded"",
+  ""evidence_sentence_ids"": [1]
+}"
+390,exclusion,Oral treatment with corticosteroids (>15 mg/day prednisolone or equivalent) or changes in corticosteroid dosing within 30 days prior to the first dose of study medication. This also includes intraarticular steroid injections or topical treatment for SLE symptoms. Inhaled or topical steroids may be g,not enough information,not applicable,[],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+391,exclusion,Intravenous corticosteroids within 3 months prior to the first dose of study medication.,not enough information,excluded,[],[1],"```json
+{
+  ""label"": ""excluded"",
+  ""evidence_sentence_ids"": [1]
+}
+```"
+392,exclusion,Intravenous cyclophosphamide within 6 months prior to the first dose of study medication.,not enough information,excluded,[],[1],"```json
+{
+  ""label"": ""excluded"",
+  ""evidence_sentence_ids"": [1]
+}
+```"
+393,exclusion,"Treatment with anti-rheumatic/immunosuppressive drugs within 3 months prior to first dose of study medication, other than the following medications at stable doses: methotrexate (≤25 mg/week), azathioprine (≤2.5 mg/kg/day), hydroxychloroquine and mycophenolate mofetil (≤3000 mg/day).",not enough information,excluded,[],[1],"```json
+{
+  ""label"": ""excluded"",
+  ""evidence_sentence_ids"": [1]
+}
+```"
+394,exclusion,B-cell depletion therapy (such as treatment with Rituximab) within 12 months prior to the first dose of study medication.,not enough information,excluded,[],[1],"```json
+{
+  ""label"": ""excluded"",
+  ""evidence_sentence_ids"": [1]
+}
+```"
+395,exclusion,Potent inhibitors or inducers of CYP3A4 intravenously or orally within 14 days prior to first dose of study medication.,not enough information,not applicable,[],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+396,exclusion,"History of myocardial infarction or current uncontrolled angina, severe uncontrolled ventricular arrhythmias, symptomatic congestive heart failure, unstable angina pectoris, or electrocardiographic evidence of acute ischemia.",not excluded,not applicable,[],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+397,exclusion,"Marked baseline prolongation of QT/QTc interval (eg, repeated demonstration of a QTc interval >450 milliseconds",not excluded,excluded,[],[1],"```json
+{
+  ""label"": ""excluded"",
+  ""evidence_sentence_ids"": [1]
+}
+```"
+398,exclusion,"History of additional risk factors for torsade de pointes (eg, heart failure, hypokalemia, family history of long QT syndrome)",not enough information,not applicable,[],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+399,exclusion,Treatment with concomitant medications that prolong the QT interval.,not enough information,not applicable,[],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+400,exclusion,"History of, or current, ischemic CNS disease.",not excluded,not applicable,[],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+401,exclusion,Current malignancy. A 5-year cancer-free period is required with the exception of skin basal or squamous cell carcinoma or cervical cancer in situ that has been excised.,not excluded,not applicable,[],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+402,exclusion,Current severe infection,not excluded,excluded,[],[1],"{
+  ""label"": ""excluded"",
+  ""evidence_sentence_ids"": [1]
+}"
+403,exclusion,"Positive result on screening for hepatitis B surface antigen, hepatitis C antibodies or human immunodeficiency virus (HIV) antibodies.",not enough information,not applicable,[],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+404,exclusion,Drug abuse.,not enough information,not applicable,[],[],"{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}"
+405,exclusion,Major surgery within 3 weeks prior to study entry.,not enough information,not applicable,[],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+406,exclusion,Known or suspected hypersensitivity to ABR-215757 or excipients.,not enough information,excluded,[],[1],"```json
+{
+  ""label"": ""excluded"",
+  ""evidence_sentence_ids"": [1]
+}
+```"
+407,exclusion,Female subject of child-bearing potential who is not using a medically accepted safe method of contraception. All female subjects of child-bearing potential must have a negative urine pregnancy test at the Screening and Baseline Visits. As interaction studies between ABR-215757 and oral contraceptiv,not enough information,not applicable,[],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+408,exclusion,Female subject of child-bearing potential who is pregnant or lactating.,not enough information,excluded,[],[0],"```json
+{
+  ""label"": ""excluded"",
+  ""evidence_sentence_ids"": [0]
+}
+```"
+409,exclusion,Simultaneous participation or participation within 4 months or 5 half lives (whichever is longer) prior to study entry in any other study involving investigational drugs or other experimental therapy.,not enough information,not applicable,[],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+410,exclusion,"Other significant, unstable medical disease not related to SLE that in the investigator's opinion would confound the study result or put the patient at risk.",not enough information,excluded,[],[1],"```json
+{
+  ""label"": ""excluded"",
+  ""evidence_sentence_ids"": [1]
+}
+```"
+411,exclusion,"Patients likely to receive oral or intravenous steroids or immunosuppressant for other non-SLE condition during the study duration, as this will confound the study result.",not enough information,excluded,[],"[1, 2, 3, 4]","```json
+{
+  ""label"": ""excluded"",
+  ""evidence_sentence_ids"": [1, 2, 3, 4]
+}
+```"
+412,exclusion,Vaccination within 4 weeks prior to the first dose of study medication.,not enough information,not applicable,[],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+414,exclusion,Patients without systemic Lupus erythematosus,not excluded,excluded,"[0, 1, 2, 3]",[1],"```json
+{
+  ""label"": ""excluded"",
+  ""evidence_sentence_ids"": [1]
+}
+```"
+418,exclusion,Failure to pass MRI metal screening,not enough information,not applicable,[],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+419,exclusion,Claustrophobia or need for sedation due to inability to hold still,not enough information,not applicable,[],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+421,inclusion,Able to take medicine orally after recovering from surgery,not enough information,not applicable,[],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+423,exclusion,History of allergy to any study medication,not excluded,not applicable,[],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+424,exclusion,Life expectancy < 72 hours,not excluded,not applicable,[],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+425,exclusion,APACHE II (health) score > 25,not excluded,not applicable,[],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+426,exclusion,Neutropenic (low white blood cell count),not excluded,excluded,[],[5],"```json
+{
+  ""label"": ""excluded"",
+  ""evidence_sentence_ids"": [5]
+}
+```"
+427,exclusion,HIV positive with current or past CD4 count < 200/mm^3,not excluded,not applicable,[],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+428,exclusion,Low platelet count (bleeds easily),not excluded,excluded,[],[5],"```json
+{
+  ""label"": ""excluded"",
+  ""evidence_sentence_ids"": [5]
+}
+```"
+429,exclusion,Malnourished with low albumin,not excluded,not applicable,[],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+430,exclusion,Condition requiring use of major tranquilizers,not excluded,not applicable,[],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+678,inclusion,"Diagnosis of mild sleep-disordered breathing (MSDB) defined as meeting all of the following criteria: Caregiver report of habitual snoring that occurs most of the night on at least three nights per week, and has been present for at least three months (on average occurring > 3 nights per week or more",not enough information,included,[0],[0],"```json
+{
+  ""label"": ""included"",
+  ""evidence_sentence_ids"": [0]
+}
+```"
+679,inclusion,"Centrally-scored polysomnogram (PSG) confirming an obstructive apnea index (OAI) <1/hour and apnea-hypopnea index (AHI) ≤3/hour and no oxygen saturation (SpO2) desaturation < 90% in conjunction with obstructive events, confirmed on PSG.",not enough information,included,[],[0],"```json
+{
+  ""label"": ""included"",
+  ""evidence_sentence_ids"": [0]
+}
+```"
+680,inclusion,Tonsillar hypertrophy ≥2 based on a standardized scale of 0-4.,not enough information,included,[],[0],"```json
+{
+  ""label"": ""included"",
+  ""evidence_sentence_ids"": [0]
+}
+```"
+681,inclusion,"Deemed to be a candidate for AT by otolaryngologist (ENT) evaluation (i.e., no technical issues that would be a contraindication for surgery such as submucous cleft palate.)",not enough information,included,[],[0],"```json
+{
+  ""label"": ""included"",
+  ""evidence_sentence_ids"": [0]
+}
+```"
+684,exclusion,"Recurrent tonsillitis that merits prompt adenotonsillectomy (AT) per the American Academy of Otolaryngology-Head and Neck Surgery Clinical Practice Guidelines (i.e., ≥7 episodes/yr in the past year; ≥5 episodes/year over the past 2 years or ≥3 episodes/yr over the past 3 years.)",not excluded,not applicable,[],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+685,exclusion,Severe obesity (body mass index (BMI) z-score ≥3).,not excluded,not applicable,[],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+686,exclusion,"Failure to thrive, defined as either height or weight being below the 5th percentile for age and gender.",not excluded,not applicable,[],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+687,exclusion,"Severe chronic health conditions that might hamper participation or confound key variables under study, including but not limited to: Severe cardiopulmonary disorders such as cystic fibrosis, and congenital heart disease. Bleeding disorders Sickle Cell Disease Epilepsy requiring medication Significa",not excluded,not applicable,[],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+688,exclusion,Children/caregivers planning to move out of the area within the year.,not excluded,not applicable,[],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+689,exclusion,Children in foster care.,not excluded,not applicable,[],[],"{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}"
+690,exclusion,Children/caregivers who do not speak English or Spanish well enough to complete the neurobehavioral measures.,not excluded,not applicable,[],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+692,inclusion,Stable medical history with no change in medications that could affect sleepiness,not enough information,not applicable,[],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+694,exclusion,"Medically unstable health conditions (e.g., heart attack, congestive heart failure)",not excluded,not applicable,[],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+695,exclusion,Use of psychotropic medications that cause sedation in the 3 months prior to study entry,not excluded,not applicable,[],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+696,exclusion,Recent or confirmed history of recreational drug use or alcohol abuse,not excluded,not applicable,[],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+698,exclusion,"Inability to communicate verbally, write, or read",not excluded,not applicable,[3],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+699,exclusion,"Visual, hearing, or cognitive impairment",not excluded,not applicable,[],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+741,inclusion,referring doctor suspects peritonsillar abscess,not enough information,not applicable,[0],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+743,inclusion,patient has daily access to his/her e-mail,not enough information,not applicable,[4],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+744,inclusion,patient speaks and understands Finnish or Swedish,not enough information,not applicable,[],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+746,inclusion,patient has peritonsillar abscess,not enough information,included,[0],[0],"```json
+{
+  ""label"": ""included"",
+  ""evidence_sentence_ids"": [0]
+}
+```"
+747,exclusion,allergy to penicillin,not excluded,not applicable,[],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+748,exclusion,allergy to metronidazole,not excluded,not applicable,[],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+749,exclusion,use of metronidazole in preceding one month,not excluded,not applicable,[],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+752,exclusion,renal insufficiency,not excluded,not applicable,[],[],"{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}"
+753,exclusion,liver insufficiency,not excluded,not applicable,[],[],"{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}"
+755,exclusion,participant in another clinical trial at the moment,not excluded,excluded,[],[0],"```json
+{
+  ""label"": ""excluded"",
+  ""evidence_sentence_ids"": [0]
+}
+```"
+756,exclusion,treatment of peritonsillar abscess requires in-patient care,not enough information,not applicable,[],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+757,exclusion,tonsillectomy during the next 30 days,not excluded,not applicable,[],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+760,inclusion,Clinical diagnosis of acute tonsillitis/pharyngitis caused by Streptococcus pyogenes based on:,not enough information,included,[0],[0],"```json
+{
+  ""label"": ""included"",
+  ""evidence_sentence_ids"": [0]
+}
+```"
+761,inclusion,"A positive result from a rapid detection throat swab test for Group A streptococcal antigen and submission of a throat swab specimen for bacterial culture, identification, and antibiotic-susceptibility testing; and",not enough information,included,[],[0],"```json
+{
+  ""label"": ""included"",
+  ""evidence_sentence_ids"": [0]
+}
+```"
+762,inclusion,A sore and scratchy throat and/or pain on swallowing (odynophagia) together with at least 2 of the following clinical signs:,not enough information,included,[0],[0],"```json
+{
+  ""label"": ""included"",
+  ""evidence_sentence_ids"": [0]
+}
+```"
+763,inclusion,Tonsil and/or pharyngeal erythema and/or exudate;,not enough information,not applicable,[],[],"{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}"
+764,inclusion,Cervical adenopathy;,not enough information,not applicable,[],[],"{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}"
+765,inclusion,Uvular edema;,not enough information,included,[],[0],"{
+  ""label"": ""included"",
+  ""evidence_sentence_ids"": [0]
+}"
+768,exclusion,History of positive throat culture for Streptococcus pyogenes in the absence of clinical signs and symptoms of T/P,not excluded,excluded,[],[0],"```json
+{
+  ""label"": ""excluded"",
+  ""evidence_sentence_ids"": [0]
+}
+```"
+769,exclusion,"Infection of the deep tissues of the upper respiratory tract (eg, epiglottitis, retropharyngeal or buccal cellulitis, or abscess of the retropharynx, tonsil, or peritonsillar area) or of the suprapharyngeal respiratory tract and its connecting structures (eg, sinusitis, otitis media, or orbital/peri",not excluded,excluded,[],[0],"```json
+{
+  ""label"": ""excluded"",
+  ""evidence_sentence_ids"": [0]
+}
+```"
+770,exclusion,History of rheumatic heart disease,not excluded,excluded,[],[0],"{
+  ""label"": ""excluded"",
+  ""evidence_sentence_ids"": [0]
+}"
+772,exclusion,Known congenital prolonged QT syndrome,not excluded,excluded,[],[0],"{
+  ""label"": ""excluded"",
+  ""evidence_sentence_ids"": [0]
+}"
+773,exclusion,"Known or suspected uncorrected hypokalemia (≤3 mmol/L [mEq/L]), or hypomagnesemia or bradycardia (<50 bpm)",not excluded,not applicable,[],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+774,exclusion,Myasthenia gravis,not excluded,excluded,[],[0],"{
+  ""label"": ""excluded"",
+  ""evidence_sentence_ids"": [0]
+}"
+775,exclusion,"Known impaired renal function, as shown by creatinine clearance ≤25 mL/min",not excluded,not applicable,[],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+776,exclusion,"Is being treated with drugs not permitted by the study protocol ie, cisapride, pimozide, astemizole, terfenadine, ergotamine, dihydroergotamine, Class IA (eg, quinidine and procainamide) or Class III (eg, dofetilide) antiarrhythmic agents, simvastatin, lovastatin and atorvastatin",not excluded,not applicable,[],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+777,exclusion,Is currently being treated with systemic antibacterials or has been treated with systemic antibacterials within 14 days prior to enrollment,not excluded,not applicable,[],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+778,exclusion,Has been treated with any investigational medication within the last 30 days,not excluded,not applicable,[],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+779,exclusion,"Has been treated with rifampicin, phenytoin, carbamazepine, or St. John's wort within the last 2 weeks",not excluded,not applicable,[],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+780,exclusion,"History of hypersensitivity or intolerance to macrolides, penicillins, or cephalosporins",not excluded,not applicable,[],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+781,exclusion,Previous enrollment in this study or previous treatment with telithromycin,not excluded,not applicable,[],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+782,exclusion,"Children of the investigator or subinvestigator, research assistant, pharmacist, study coordinator, other staff, or relative thereof directly involved in the conduct of the protocol",not enough information,excluded,[],[0],"```json
+{
+  ""label"": ""excluded"",
+  ""evidence_sentence_ids"": [0]
+}
+```"
+827,inclusion,Clinical diagnosis of bronchial asthma,not enough information,included,"[0, 1, 2, 3, 6]","[0, 1, 2, 3, 4, 5, 6, 7]","{
+  ""label"": ""included"",
+  ""evidence_sentence_ids"": [0, 1, 2, 3, 4, 5, 6, 7]
+}"
+828,inclusion,Must be able to swallow tablets,not enough information,not applicable,[],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+829,exclusion,Steroid inhalation or ingestion,not excluded,not applicable,[],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+830,inclusion,"Normal lung function, defined as (Knudson 1976/1984 predicted set): FVC of > 80 % of that predicted for gender, ethnicity, age and height FEV1 of > 80 % of that predicted for gender, ethnicity, age and height FEV1/FVC ratio of > .75",not enough information,not applicable,[0],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+831,inclusion,"Oxygen saturation of > 94 % and normal blood pressure (Systolic between 150 - 90, Diastolic between 90-60 mm Hg)",not enough information,not applicable,[7],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+832,inclusion,Symptom Score no greater than 6 (out of a possible 24) for total symptom score with a value no greater than 2 for any one score.,not enough information,not applicable,[],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+833,inclusion,Negative methacholine inhalation challenge as performed in the screening protocol. (Less than a 20% decrease in FEV1 at a maximum methacholine concentration of 10 mg/ml),not enough information,not applicable,[0],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+835,inclusion,Negative allergy skin test (AST),not enough information,not applicable,[],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+836,inclusion,"History of episodic wheezing, chest tightness, or shortness of breath after age of 6 years consistent with asthma, or physician diagnosed asthma after age of 6 years.",not included,included,"[0, 1]","[0, 1, 2, 3, 4, 5, 6, 7]","```json
+{
+  ""label"": ""included"",
+  ""evidence_sentence_ids"": [0, 1, 2, 3, 4, 5, 6, 7]
+}
+```"
+837,inclusion,Positive methacholine test.,not enough information,included,[],"[0, 1, 2, 3, 4, 5, 6, 7]","{
+  ""label"": ""included"",
+  ""evidence_sentence_ids"": [0, 1, 2, 3, 4, 5, 6, 7]
+}"
+838,inclusion,FEV1 of at least 80% of predicted and FEV1/FVC ratio of at least .70 (without use of bronchodilating medications for 12 hours),not enough information,included,[0],"[0, 1, 2, 3, 4, 5, 6, 7]","```json
+{
+  ""label"": ""included"",
+  ""evidence_sentence_ids"": [0, 1, 2, 3, 4, 5, 6, 7]
+}
+```"
+839,inclusion,"Allergic sensitization to at least one of the following allergen preparations: (House Dust Mite f, House dust mite p, Cockroach, Tree mix, Grass Mix, Weed Mix, Mold Mix 1, Mold Mix 2, Rat, Mouse, Guinea Pig, Rabbit, Cat or Dog) confirmed by positive AST.",not enough information,included,[1],"[0, 1, 2, 3, 4, 5, 6, 7]","```json
+{
+  ""label"": ""included"",
+  ""evidence_sentence_ids"": [0, 1, 2, 3, 4, 5, 6, 7]
+}
+```"
+840,inclusion,Negative allergy skin test as performed in the screening protocol.,not enough information,not applicable,[],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+841,exclusion,"Any chronic medical condition considered by the PI as a contraindication to the exposure study including significant cardiovascular disease, diabetes requiring medication, chronic renal disease, or chronic thyroid disease.",not excluded,not applicable,[],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+842,exclusion,Physician directed emergency treatment for an asthma exacerbation within the preceding 12 months.,not excluded,not applicable,[],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+843,exclusion,Use of systemic steroid therapy within the preceding 12 months for an asthma exacerbation. All use of systemic steroids in the last year will be reviewed by a study physician.,not excluded,not applicable,[],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+844,exclusion,"Use of inhaled steroids, cromolyn or leukotriene inhibitors (montelukast or zafirlukast) except for use of cromolyn exclusively prior to exercise.",not excluded,not applicable,[],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+845,exclusion,Use of daily theophylline within the past month.,not excluded,not applicable,[],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+846,exclusion,Use of tricyclics and MAO inhibitors,not excluded,not applicable,[],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+849,exclusion,Nighttime symptoms of cough or wheeze greater than 1x/week at baseline (not during a clearly recognized viral induced asthma exacerbation) which would be characteristic of a person of moderate or severe persistent asthma as outlined in the current NHLBI guidelines for diagnosis and management of ast,not enough information,excluded,"[0, 3, 6]","[0, 1, 2, 3, 4, 5, 6, 7]","```json
+{
+  ""label"": ""excluded"",
+  ""evidence_sentence_ids"": [0, 1, 2, 3, 4, 5, 6, 7]
+}
+```"
+850,exclusion,Exacerbation of asthma more than 2x/week which would be characteristic of a person of moderate or severe persistent asthma as outlined in the current NHLBI guidelines for diagnosis and management of asthma.,not excluded,not applicable,"[0, 1, 3, 6]",[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+851,exclusion,"Daily requirement for albuterol due to asthma symptoms (cough, wheeze, chest tightness) which would be characteristic of a person of moderate or severe persistent asthma as outlined in the current NHLBI guidelines for diagnosis and management of asthma. (Not to include prophylactic use of albuterol ",not excluded,not applicable,[],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+852,exclusion,Viral upper respiratory tract infection within 2 weeks of challenge.,not excluded,not applicable,[],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+853,exclusion,Any acute infection requiring antibiotics within 2 weeks of challenge,not excluded,not applicable,[],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"
+854,exclusion,"Receipt of LAIV (Live Attenuated Influenza Vaccine), also know as FluMist®, within the prior 14 days",not excluded,not applicable,[],[],"```json
+{
+  ""label"": ""not applicable"",
+  ""evidence_sentence_ids"": []
+}
+```"

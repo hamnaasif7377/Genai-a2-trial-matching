@@ -1,0 +1,274 @@
+=== annotation 161 | inclusion | gold=not included | pred=not enough information
+criterion: Patients undergoing elective carotid endarterectomy
+gold evidence []: 
+pred evidence []: 
+
+=== annotation 162 | inclusion | gold=not included | pred=not enough information
+criterion: Patients undergoing open abdominal aortic aneurysm repair
+gold evidence []: 
+pred evidence [0, 1, 2]: A physician is called to see a 67-year-old woman who underwent cardiac catheterization via the right femoral artery earlier in the morning. | She is now complaining of a cool right foot. | Upon examination she has a pulsatile mass in her right groin with loss of distal pulses, and auscultation reveals a bruit over the point at which the right femoral artery was entered.
+
+=== annotation 163 | inclusion | gold=not included | pred=not enough information
+criterion: Patients undergoing endovascular abdominal aneurysm repair
+gold evidence []: 
+pred evidence [0, 1, 2]: A physician is called to see a 67-year-old woman who underwent cardiac catheterization via the right femoral artery earlier in the morning. | She is now complaining of a cool right foot. | Upon examination she has a pulsatile mass in her right groin with loss of distal pulses, and auscultation reveals a bruit over the point at which the right femoral artery was entered.
+
+=== annotation 164 | inclusion | gold=not included | pred=not enough information
+criterion: Patients undergoing surgical lower limb revascularisation (suprainguinal or infrainguinal)
+gold evidence []: 
+pred evidence [0, 1, 2]: A physician is called to see a 67-year-old woman who underwent cardiac catheterization via the right femoral artery earlier in the morning. | She is now complaining of a cool right foot. | Upon examination she has a pulsatile mass in her right groin with loss of distal pulses, and auscultation reveals a bruit over the point at which the right femoral artery was entered.
+
+=== annotation 169 | exclusion | gold=not enough information | pred=not excluded
+criterion: Patients with an estimated pre-operative glomerular filtration rate < 30mls/min/1.73m2
+gold evidence []: 
+pred evidence []: 
+
+=== annotation 174 | exclusion | gold=not enough information | pred=not excluded
+criterion: Patients with previous axillary surgery
+gold evidence []: 
+pred evidence []: 
+
+=== annotation 176 | inclusion | gold=included | pred=not enough information
+criterion: No medical history of central vena catheterization.
+gold evidence [0]: A physician is called to see a 67-year-old woman who underwent cardiac catheterization via the right femoral artery earlier in the morning.
+pred evidence [0]: A physician is called to see a 67-year-old woman who underwent cardiac catheterization via the right femoral artery earlier in the morning.
+
+=== annotation 177 | inclusion | gold=not included | pred=not enough information
+criterion: Maintenance hemodialysis after central vena catheterization.
+gold evidence []: 
+pred evidence []: 
+
+=== annotation 185 | inclusion | gold=included | pred=not enough information
+criterion: Patients were included if they were diagnosed with Shock, Acute respiratory distress syndrome (ARDS), or both.
+gold evidence [2, 3]: On examination she is pale and in moderate discomfort, as well as tachypneic and tachycardic. | Her body temperature is normal and her blood pressure is 80/60.
+pred evidence [0, 1, 2, 3]: A 40-year-old woman with no past medical history presents to the ER with excruciating pain in her right arm that had started 1 hour prior to her admission. | She denies trauma. | On examination she is pale and in moderate discomfort, as well as tachypneic and tachycardic. | Her body temperature is normal and her blood pressure is 80/60.
+
+=== annotation 186 | inclusion | gold=included | pred=not enough information
+criterion: Heart rate of at least 90/min;
+gold evidence [2]: On examination she is pale and in moderate discomfort, as well as tachypneic and tachycardic.
+pred evidence [2]: On examination she is pale and in moderate discomfort, as well as tachypneic and tachycardic.
+
+=== annotation 187 | inclusion | gold=included | pred=not enough information
+criterion: A respiratory rate of at least 20/min or a PaCO2 of 32mmHg or lower or the use of mechanical ventilation;
+gold evidence [2]: On examination she is pale and in moderate discomfort, as well as tachypneic and tachycardic.
+pred evidence [2]: On examination she is pale and in moderate discomfort, as well as tachypneic and tachycardic.
+
+=== annotation 188 | inclusion | gold=not included | pred=not enough information
+criterion: The use of vasopressors to maintain a systolic blood pressure of at least 90mmHg despite fluid resuscitation, low dose of dopamine (≤ 5 μg/kg per minute), or dobutamine;
+gold evidence [3]: Her body temperature is normal and her blood pressure is 80/60.
+pred evidence []: 
+
+=== annotation 193 | exclusion | gold=not enough information | pred=not excluded
+criterion: Patients were moribund.
+gold evidence [0, 1, 2, 3, 4]: A 40-year-old woman with no past medical history presents to the ER with excruciating pain in her right arm that had started 1 hour prior to her admission. | She denies trauma. | On examination she is pale and in moderate discomfort, as well as tachypneic and tachycardic. | Her body temperature is normal and her blood pressure is 80/60. | Her right arm has no discoloration or movement limitation.
+pred evidence []: 
+
+=== annotation 315 | exclusion | gold=not enough information | pred=not excluded
+criterion: BMI> 40 kg/m2.
+gold evidence []: 
+pred evidence []: 
+
+=== annotation 322 | exclusion | gold=not excluded | pred=not applicable
+criterion: Pregnant women or women of childbearing age who do not have adequate contraception.
+gold evidence [0]: A 48-year-old white male with history of common variable immunodeficiency (CVID) with acute abdominal pain, fever, dehydration, HR of 132 bpm, BP 80/40.
+pred evidence []: 
+
+=== annotation 382 | inclusion | gold=included | pred=not enough information
+criterion: Fulfil at least 4 criteria for SLE as defined by the American College of Rheumatology (ACR)
+gold evidence [0, 1, 2]: A 21-year-old female is evaluated for progressive arthralgias and malaise. | On examination she is found to have alopecia, a rash mainly distributed on the bridge of her nose and her cheeks, a delicate non-palpable purpura on her calves, and swelling and tenderness of her wrists and ankles. | Her lab shows normocytic anemia, thrombocytopenia, a 4/4 positive ANA and anti-dsDNA.
+pred evidence [0, 1, 2, 3]: A 21-year-old female is evaluated for progressive arthralgias and malaise. | On examination she is found to have alopecia, a rash mainly distributed on the bridge of her nose and her cheeks, a delicate non-palpable purpura on her calves, and swelling and tenderness of her wrists and ankles. | Her lab shows normocytic anemia, thrombocytopenia, a 4/4 positive ANA and anti-dsDNA. | Her urine is posit
+
+=== annotation 385 | inclusion | gold=included | pred=not enough information
+criterion: Ability to take and retain oral medication
+gold evidence [4]: The patient will provide informed consent, and will comply with the trial protocol without any practical issues.
+pred evidence [4]: The patient will provide informed consent, and will comply with the trial protocol without any practical issues.
+
+=== annotation 389 | exclusion | gold=not enough information | pred=not excluded
+criterion: Severe renal impairment (estimated or measured GFR <50%)
+gold evidence []: 
+pred evidence []: 
+
+=== annotation 390 | exclusion | gold=not enough information | pred=not excluded
+criterion: Oral treatment with corticosteroids (>15 mg/day prednisolone or equivalent) or changes in corticosteroid dosing within 30 days prior to the first dose of study medication. This also includes intraarticular steroid injections or topical treatment for SLE symptoms. Inhaled or topical steroids may be given for reasons other than SLE disease activity (such as asthma, contact dermatitis) as clinically 
+gold evidence []: 
+pred evidence []: 
+
+=== annotation 391 | exclusion | gold=not enough information | pred=not excluded
+criterion: Intravenous corticosteroids within 3 months prior to the first dose of study medication.
+gold evidence []: 
+pred evidence []: 
+
+=== annotation 392 | exclusion | gold=not enough information | pred=not excluded
+criterion: Intravenous cyclophosphamide within 6 months prior to the first dose of study medication.
+gold evidence []: 
+pred evidence []: 
+
+=== annotation 393 | exclusion | gold=not enough information | pred=not excluded
+criterion: Treatment with anti-rheumatic/immunosuppressive drugs within 3 months prior to first dose of study medication, other than the following medications at stable doses: methotrexate (≤25 mg/week), azathioprine (≤2.5 mg/kg/day), hydroxychloroquine and mycophenolate mofetil (≤3000 mg/day).
+gold evidence []: 
+pred evidence []: 
+
+=== annotation 394 | exclusion | gold=not enough information | pred=not excluded
+criterion: B-cell depletion therapy (such as treatment with Rituximab) within 12 months prior to the first dose of study medication.
+gold evidence []: 
+pred evidence []: 
+
+=== annotation 395 | exclusion | gold=not enough information | pred=not excluded
+criterion: Potent inhibitors or inducers of CYP3A4 intravenously or orally within 14 days prior to first dose of study medication.
+gold evidence []: 
+pred evidence []: 
+
+=== annotation 398 | exclusion | gold=not enough information | pred=not excluded
+criterion: History of additional risk factors for torsade de pointes (eg, heart failure, hypokalemia, family history of long QT syndrome)
+gold evidence []: 
+pred evidence []: 
+
+=== annotation 399 | exclusion | gold=not enough information | pred=not excluded
+criterion: Treatment with concomitant medications that prolong the QT interval.
+gold evidence []: 
+pred evidence []: 
+
+=== annotation 403 | exclusion | gold=not enough information | pred=not excluded
+criterion: Positive result on screening for hepatitis B surface antigen, hepatitis C antibodies or human immunodeficiency virus (HIV) antibodies.
+gold evidence []: 
+pred evidence []: 
+
+=== annotation 404 | exclusion | gold=not enough information | pred=not excluded
+criterion: Drug abuse.
+gold evidence []: 
+pred evidence []: 
+
+=== annotation 405 | exclusion | gold=not enough information | pred=not excluded
+criterion: Major surgery within 3 weeks prior to study entry.
+gold evidence []: 
+pred evidence []: 
+
+=== annotation 406 | exclusion | gold=not enough information | pred=not excluded
+criterion: Known or suspected hypersensitivity to ABR-215757 or excipients.
+gold evidence []: 
+pred evidence []: 
+
+=== annotation 407 | exclusion | gold=not enough information | pred=not excluded
+criterion: Female subject of child-bearing potential who is not using a medically accepted safe method of contraception. All female subjects of child-bearing potential must have a negative urine pregnancy test at the Screening and Baseline Visits. As interaction studies between ABR-215757 and oral contraceptives have not yet been performed, women using the contraceptive pill must also use a complementary con
+gold evidence []: 
+pred evidence []: 
+
+=== annotation 408 | exclusion | gold=not enough information | pred=not excluded
+criterion: Female subject of child-bearing potential who is pregnant or lactating.
+gold evidence []: 
+pred evidence []: 
+
+=== annotation 409 | exclusion | gold=not enough information | pred=not excluded
+criterion: Simultaneous participation or participation within 4 months or 5 half lives (whichever is longer) prior to study entry in any other study involving investigational drugs or other experimental therapy.
+gold evidence []: 
+pred evidence []: 
+
+=== annotation 410 | exclusion | gold=not enough information | pred=not excluded
+criterion: Other significant, unstable medical disease not related to SLE that in the investigator's opinion would confound the study result or put the patient at risk.
+gold evidence []: 
+pred evidence []: 
+
+=== annotation 411 | exclusion | gold=not enough information | pred=not excluded
+criterion: Patients likely to receive oral or intravenous steroids or immunosuppressant for other non-SLE condition during the study duration, as this will confound the study result.
+gold evidence []: 
+pred evidence []: 
+
+=== annotation 412 | exclusion | gold=not enough information | pred=not excluded
+criterion: Vaccination within 4 weeks prior to the first dose of study medication.
+gold evidence []: 
+pred evidence []: 
+
+=== annotation 417 | inclusion | gold=included | pred=not enough information
+criterion: receiving either CT scan or ultrasound of the abdomen for diagnosis
+gold evidence [5]: On an abdominal ultrasound, a markedly edematous appendix is seen.
+pred evidence [5]: On an abdominal ultrasound, a markedly edematous appendix is seen.
+
+=== annotation 418 | exclusion | gold=not enough information | pred=not excluded
+criterion: Failure to pass MRI metal screening
+gold evidence []: 
+pred evidence []: 
+
+=== annotation 419 | exclusion | gold=not enough information | pred=not excluded
+criterion: Claustrophobia or need for sedation due to inability to hold still
+gold evidence []: 
+pred evidence []: 
+
+=== annotation 422 | inclusion | gold=not applicable | pred=not enough information
+criterion: If female, using birth control
+gold evidence [3]: She has had no sexual partners and her menses are regular.
+pred evidence [3]: She has had no sexual partners and her menses are regular.
+
+=== annotation 683 | exclusion | gold=not applicable | pred=not excluded
+criterion: Previous tonsillectomy, including partial tonsillectomy
+gold evidence []: 
+pred evidence []: 
+
+=== annotation 693 | exclusion | gold=not applicable | pred=not excluded
+criterion: Suspected diagnosis of a sleep disorder other than OSA (i.e., periodic leg movements, narcolepsy, insomnia, central sleep apnea, sleep hypoventilation syndrome)
+gold evidence []: 
+pred evidence []: 
+
+=== annotation 745 | inclusion | gold=not applicable | pred=not enough information
+criterion: female patients have adequate birth-control method
+gold evidence []: 
+pred evidence []: 
+
+=== annotation 751 | exclusion | gold=not applicable | pred=not excluded
+criterion: breast-feeding
+gold evidence []: 
+pred evidence []: 
+
+=== annotation 754 | exclusion | gold=not applicable | pred=not excluded
+criterion: alcoholism (drunk at least once a week)
+gold evidence []: 
+pred evidence []: 
+
+=== annotation 756 | exclusion | gold=not enough information | pred=not excluded
+criterion: treatment of peritonsillar abscess requires in-patient care
+gold evidence []: 
+pred evidence []: 
+
+=== annotation 758 | exclusion | gold=not applicable | pred=not excluded
+criterion: army recruit
+gold evidence []: 
+pred evidence []: 
+
+=== annotation 767 | exclusion | gold=not applicable | pred=not excluded
+criterion: Symptoms that collectively suggest nonstreptococcal T/P (eg, laryngitis, coryza, conjunctivitis, diarrhea, cough)
+gold evidence [0]: A 5-year-old boy presents to the emergency department with complaints of progressively worsening dysphagia, drooling, fever and vocal changes.
+pred evidence []: 
+
+=== annotation 771 | exclusion | gold=not applicable | pred=not excluded
+criterion: Females of childbearing potential (ie, have reached menarche)
+gold evidence [0]: A 5-year-old boy presents to the emergency department with complaints of progressively worsening dysphagia, drooling, fever and vocal changes.
+pred evidence []: 
+
+=== annotation 782 | exclusion | gold=not enough information | pred=not excluded
+criterion: Children of the investigator or subinvestigator, research assistant, pharmacist, study coordinator, other staff, or relative thereof directly involved in the conduct of the protocol
+gold evidence []: 
+pred evidence []: 
+
+=== annotation 834 | inclusion | gold=not applicable | pred=not enough information
+criterion: --Negative pregnancy test for females
+gold evidence []: 
+pred evidence []: 
+
+=== annotation 836 | inclusion | gold=not included | pred=not enough information
+criterion: History of episodic wheezing, chest tightness, or shortness of breath after age of 6 years consistent with asthma, or physician diagnosed asthma after age of 6 years.
+gold evidence [0, 1]: A 4 year old boy presents to the emergency room with wheezing. | He has had a history of allergic rhinitis, but no history of wheezing.
+pred evidence [0, 1, 3, 4]: A 4 year old boy presents to the emergency room with wheezing. | He has had a history of allergic rhinitis, but no history of wheezing. | The coughing lasted only moments, but he has been audibly wheezing since. | Mother was concerned, because his breathing has not returned to normal, so she brought him to the ED.
+
+=== annotation 848 | exclusion | gold=not applicable | pred=not excluded
+criterion: Cigarette smoking > 1 pack per month.
+gold evidence []: 
+pred evidence []: 
+
+=== annotation 849 | exclusion | gold=not enough information | pred=not excluded
+criterion: Nighttime symptoms of cough or wheeze greater than 1x/week at baseline (not during a clearly recognized viral induced asthma exacerbation) which would be characteristic of a person of moderate or severe persistent asthma as outlined in the current NHLBI guidelines for diagnosis and management of asthma.
+gold evidence [0, 3, 6]: A 4 year old boy presents to the emergency room with wheezing. | The coughing lasted only moments, but he has been audibly wheezing since. | Wheezing is heard in the mid-right chest area.
+pred evidence [1, 2, 3, 4]: He has had a history of allergic rhinitis, but no history of wheezing. | His mother reports that 5 hours ago patient was playing in the backyard sandbox when she heard him suddenly start coughing. | The coughing lasted only moments, but he has been audibly wheezing since. | Mother was concerned, because his breathing has not returned to normal, so she brought him to the ED.
+
+=== annotation 850 | exclusion | gold=not excluded | pred=not enough information
+criterion: Exacerbation of asthma more than 2x/week which would be characteristic of a person of moderate or severe persistent asthma as outlined in the current NHLBI guidelines for diagnosis and management of asthma.
+gold evidence [0, 1, 3, 6]: A 4 year old boy presents to the emergency room with wheezing. | He has had a history of allergic rhinitis, but no history of wheezing. | The coughing lasted only moments, but he has been audibly wheezing since. | Wheezing is heard in the mid-right chest area.
+pred evidence [0, 1, 2, 3, 4]: A 4 year old boy presents to the emergency room with wheezing. | He has had a history of allergic rhinitis, but no history of wheezing. | His mother reports that 5 hours ago patient was playing in the backyard sandbox when she heard him suddenly start coughing. | The coughing lasted only moments, but he has been audibly wheezing since. | Mother was concerned, because his breathing has not returned
