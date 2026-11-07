@@ -1,0 +1,15 @@
+\begin{table*}[t]\centering\small
+\caption{Evidence-sentence retrieval on the test split. Records with no gold and no predicted evidence count as P=R=F1=1; exactly one empty set counts as 0. The last two columns use only records with non-empty gold evidence.}\label{tab:evidence}
+\begin{tabular}{llccccccccc}\toprule
+ & & \multicolumn{3}{c}{Macro} & \multicolumn{3}{c}{Micro} & Non-empty & \\
+Model & Subset & P & R & F1 & P & R & F1 & macro-F1 & $n$\\\midrule
+Zero-shot, naive prompt & overall & 0.148 & 0.191 & 0.149 & 0.167 & 0.660 & 0.267 & 0.503 & 61 \\
+Zero-shot, naive prompt & inclusion & 0.299 & 0.443 & 0.324 & 0.229 & 0.774 & 0.353 & 0.540 & 45 \\
+Zero-shot, naive prompt & exclusion & 0.061 & 0.047 & 0.049 & 0.087 & 0.438 & 0.145 & 0.400 & 16 \\\midrule
+Zero-shot, labels listed & overall & 0.581 & 0.622 & 0.587 & 0.253 & 0.500 & 0.336 & 0.310 & 61 \\
+Zero-shot, labels listed & inclusion & 0.487 & 0.602 & 0.509 & 0.312 & 0.645 & 0.421 & 0.382 & 45 \\
+Zero-shot, labels listed & exclusion & 0.635 & 0.634 & 0.631 & 0.121 & 0.219 & 0.156 & 0.106 & 16 \\\midrule
+Fine-tuned (LoRA) & overall & 0.831 & 0.854 & 0.835 & 0.496 & 0.670 & 0.570 & 0.640 & 61 \\
+Fine-tuned (LoRA) & inclusion & 0.711 & 0.774 & 0.723 & 0.491 & 0.855 & 0.624 & 0.761 & 45 \\
+Fine-tuned (LoRA) & exclusion & 0.900 & 0.899 & 0.899 & 0.526 & 0.312 & 0.392 & 0.301 & 16 \\\midrule
+\bottomrule\end{tabular}\end{table*}

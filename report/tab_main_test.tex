@@ -1,0 +1,9 @@
+\begin{table*}[t]\centering\small
+\caption{Held-out test split (8 patients, 206 records), greedy decoding, evaluated once.}\label{tab:test}
+\begin{tabular}{lccccccc}\toprule
+ & \multicolumn{2}{c}{Overall} & \multicolumn{2}{c}{Inclusion} & \multicolumn{2}{c}{Exclusion} & Evidence\\
+Model & Acc. & Macro-F1 & Acc. & Macro-F1 & Acc. & Macro-F1 & macro-F1\\\midrule
+Zero-shot, naive prompt & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 & 0.149 \\
+Zero-shot, labels listed & 0.170 & 0.141 & 0.320 & 0.199 & 0.084 & 0.054 & 0.587 \\
+Fine-tuned (LoRA) & 0.733 & 0.540 & 0.773 & 0.417 & 0.710 & 0.432 & 0.835 \\
+\bottomrule\end{tabular}\end{table*}

@@ -1,0 +1,14 @@
+\begin{table}[t]\centering\footnotesize
+\caption{Test confusion matrices of the fine-tuned model (rows: gold, columns: predicted). Inc = included, NotInc = not included, Exc = excluded, NotExc = not excluded, NEI = not enough information, NA = not applicable. Top: inclusion criteria. Bottom: exclusion criteria.}\label{tab:conf}
+\begin{tabular}{lrrrr}\toprule
+ gold$\backslash$pred & Inc & NotInc & NEI & NA\\\midrule
+Inc & 20 & 0 & 7 & 0\\
+NotInc & 0 & 0 & 7 & 0\\
+NEI & 0 & 0 & 38 & 0\\
+NA & 0 & 0 & 3 & 0\\\bottomrule\end{tabular}\\[4pt]
+\begin{tabular}{lrrr}\toprule
+ gold$\backslash$pred & NotExc & NEI & NA\\\midrule
+NotExc & 89 & 1 & 1\\
+NEI & 28 & 0 & 0\\
+NA & 8 & 0 & 4\\\bottomrule\end{tabular}
+\end{table}

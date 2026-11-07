@@ -1,0 +1,9 @@
+\begin{table*}[t]\centering\small
+\caption{Validation split (8 patients, 206 records), identical examples and greedy decoding for all rows.}\label{tab:val}
+\begin{tabular}{lccccccc}\toprule
+ & \multicolumn{2}{c}{Overall} & \multicolumn{2}{c}{Inclusion} & \multicolumn{2}{c}{Exclusion} & Evidence\\
+Model & Acc. & Macro-F1 & Acc. & Macro-F1 & Acc. & Macro-F1 & macro-F1\\\midrule
+Zero-shot, naive prompt & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 & 0.196 \\
+Zero-shot, labels listed & 0.126 & 0.116 & 0.288 & 0.149 & 0.050 & 0.045 & 0.442 \\
+Fine-tuned (LoRA) & 0.718 & 0.407 & 0.667 & 0.343 & 0.743 & 0.338 & 0.725 \\
+\bottomrule\end{tabular}\end{table*}

@@ -1,0 +1,15 @@
+\begin{table}[t]\centering\footnotesize
+\caption{Per-class precision, recall and F1 of the fine-tuned model on the held-out test split, separately for inclusion and exclusion criteria.}\label{tab:perclass}
+\begin{tabular}{llrrrr}\toprule
+Type & Label & P & R & F1 & Support\\\midrule
+inclusion & included & 1.000 & 0.741 & 0.851 & 27 \\
+inclusion & not included & 0.000 & 0.000 & 0.000 & 7 \\
+inclusion & not enough information & 0.691 & 1.000 & 0.817 & 38 \\
+inclusion & not applicable & 0.000 & 0.000 & 0.000 & 3 \\
+\multicolumn{2}{l}{\emph{inclusion: accuracy / macro-F1}} & \multicolumn{4}{r}{0.773 / 0.417} \\\midrule
+exclusion & excluded & 0.000 & 0.000 & 0.000 & 0 \\
+exclusion & not excluded & 0.712 & 0.978 & 0.824 & 91 \\
+exclusion & not enough information & 0.000 & 0.000 & 0.000 & 28 \\
+exclusion & not applicable & 0.800 & 0.333 & 0.471 & 12 \\
+\multicolumn{2}{l}{\emph{exclusion: accuracy / macro-F1}} & \multicolumn{4}{r}{0.710 / 0.432} \\\midrule
+\bottomrule\end{tabular}\end{table}
