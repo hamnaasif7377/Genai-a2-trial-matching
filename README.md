@@ -1,4 +1,4 @@
-# Clinical trial eligibility screening: LoRA fine-tuning, KV cache, tiled attention, speculative decoding
+﻿# Clinical trial eligibility screening: LoRA fine-tuning, KV cache, tiled attention, speculative decoding
 
 Generative AI, Assignment 2. **Educational screening prototype. Not a clinical enrollment decision.**
 
@@ -10,7 +10,7 @@ browser application. `model.generate()` is never used.
 ## Links
 - Report (PDF): `report/main.pdf` (LaTeX source: `report/main.tex`)
 - Adapter weights (download): https://drive.google.com/drive/folders/1Q_y-8_If-Pbt11oLkFB0fIlx_YyGqPF6?usp=sharing (folders `lora_r16_v1/final_adapter` and `lora_draft_0p5b_v1/final_adapter`)
-- Demo video: **VIDEO LINK TO BE ADDED**
+- Demo video: **https://youtu.be/cOS3ocKGSzQ**
 - Split manifest: `manifests/split_manifest.json`
 
 ## Headline results (held-out test split: 8 patients, 206 criterion records, greedy decoding)
@@ -112,3 +112,6 @@ hand-written aggregation rule, not a labeled ground truth; tiled attention and s
 
 ## AI-use statement
 I used an AI assistant (Claude) to generate the first versions of the scripts and a draft of the report, and to help fix library-version errors on Colab. I ran all training, evaluations, benchmarks and tests myself, checked the logs and outputs, and made sure the numbers in the report come from the saved result files. See the appendix of the report.
+
+
+
