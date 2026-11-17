@@ -1,0 +1,118 @@
+{
+  "device": "cuda",
+  "torch": "2.14.1+cu130",
+  "B": 1,
+  "H": 8,
+  "D": 64,
+  "blocks": [
+    128,
+    128
+  ],
+  "rows": [
+    {
+      "L": 128,
+      "impl": "reference",
+      "median_ms": 0.6684679997306375,
+      "peak_extra_mem_MB": 1.505859375,
+      "score_buffer_MB_analytic": 0.5
+    },
+    {
+      "L": 128,
+      "impl": "tiled",
+      "median_ms": 1.2308549999033858,
+      "peak_extra_mem_MB": 2.271484375,
+      "score_buffer_MB_analytic": 0.5
+    },
+    {
+      "L": 128,
+      "impl": "torch_sdpa",
+      "median_ms": 0.14174400030242396,
+      "peak_extra_mem_MB": 0.2509765625,
+      "score_buffer_MB_analytic": NaN
+    },
+    {
+      "L": 256,
+      "impl": "reference",
+      "median_ms": 0.73348999967493,
+      "peak_extra_mem_MB": 6.01171875,
+      "score_buffer_MB_analytic": 2.0
+    },
+    {
+      "L": 256,
+      "impl": "tiled",
+      "median_ms": 3.4666420001485676,
+      "peak_extra_mem_MB": 2.771484375,
+      "score_buffer_MB_analytic": 0.5
+    },
+    {
+      "L": 256,
+      "impl": "torch_sdpa",
+      "median_ms": 0.19427200004429324,
+      "peak_extra_mem_MB": 0.5009765625,
+      "score_buffer_MB_analytic": NaN
+    },
+    {
+      "L": 512,
+      "impl": "reference",
+      "median_ms": 1.0709009998208785,
+      "peak_extra_mem_MB": 24.0234375,
+      "score_buffer_MB_analytic": 8.0
+    },
+    {
+      "L": 512,
+      "impl": "tiled",
+      "median_ms": 10.332470000321337,
+      "peak_extra_mem_MB": 3.271484375,
+      "score_buffer_MB_analytic": 0.5
+    },
+    {
+      "L": 512,
+      "impl": "torch_sdpa",
+      "median_ms": 0.43045999973401194,
+      "peak_extra_mem_MB": 1.0009765625,
+      "score_buffer_MB_analytic": NaN
+    },
+    {
+      "L": 1024,
+      "impl": "reference",
+      "median_ms": 3.0602070000895765,
+      "peak_extra_mem_MB": 96.046875,
+      "score_buffer_MB_analytic": 32.0
+    },
+    {
+      "L": 1024,
+      "impl": "tiled",
+      "median_ms": 25.46648500037918,
+      "peak_extra_mem_MB": 4.271484375,
+      "score_buffer_MB_analytic": 0.5
+    },
+    {
+      "L": 1024,
+      "impl": "torch_sdpa",
+      "median_ms": 0.9169619997919654,
+      "peak_extra_mem_MB": 2.0009765625,
+      "score_buffer_MB_analytic": NaN
+    },
+    {
+      "L": 2048,
+      "impl": "reference",
+      "median_ms": 11.289576000308443,
+      "peak_extra_mem_MB": 384.09375,
+      "score_buffer_MB_analytic": 128.0
+    },
+    {
+      "L": 2048,
+      "impl": "tiled",
+      "median_ms": 90.75798399999258,
+      "peak_extra_mem_MB": 6.271484375,
+      "score_buffer_MB_analytic": 0.5
+    },
+    {
+      "L": 2048,
+      "impl": "torch_sdpa",
+      "median_ms": 2.080898999793135,
+      "peak_extra_mem_MB": 4.0009765625,
+      "score_buffer_MB_analytic": NaN
+    }
+  ]
+}

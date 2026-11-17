@@ -1,0 +1,70 @@
+{
+  "target": "Qwen/Qwen2.5-1.5B-Instruct",
+  "target_adapter": "/content/drive/MyDrive/GenAI_A2/adapters/lora_r16_v1/final_adapter",
+  "draft": "Qwen/Qwen2.5-0.5B-Instruct",
+  "draft_adapter": "/content/drive/MyDrive/GenAI_A2/adapters/lora_draft_0p5b_v1/final_adapter",
+  "dtype": "float16",
+  "n_prompts": 30,
+  "max_new": 64,
+  "target_weights_MB": 2944.4013671875,
+  "draft_weights_MB": 942.292724609375,
+  "baseline": {
+    "time_s": 19.005739033999816,
+    "tokens": 493,
+    "tok_per_s": 25.93953327034853,
+    "peak_mem_MB": 3936.9326171875
+  },
+  "spec": [
+    {
+      "k": 2,
+      "identical": "30/30",
+      "mismatch_indices": [],
+      "acceptance_rate": 0.9625668449197861,
+      "tokens_per_round": 2.6363636363636362,
+      "target_forwards_per_token": 0.44016227180527384,
+      "tok_per_s": 17.546086654685805,
+      "time_s": 28.097433331000957,
+      "speedup_vs_greedy": 0.6764226045170492,
+      "peak_mem_MB": 3936.87548828125,
+      "rounds": 187,
+      "drafted": 374,
+      "accepted": 360,
+      "target_fwd": 217,
+      "draft_fwd": 551
+    },
+    {
+      "k": 4,
+      "identical": "30/30",
+      "mismatch_indices": [],
+      "acceptance_rate": 0.96,
+      "tokens_per_round": 3.944,
+      "target_forwards_per_token": 0.3144016227180527,
+      "tok_per_s": 17.86660954634998,
+      "time_s": 27.593371799000124,
+      "speedup_vs_greedy": 0.6887791449498938,
+      "peak_mem_MB": 3936.87548828125,
+      "rounds": 125,
+      "drafted": 500,
+      "accepted": 480,
+      "target_fwd": 155,
+      "draft_fwd": 617
+    },
+    {
+      "k": 6,
+      "identical": "30/30",
+      "mismatch_indices": [],
+      "acceptance_rate": 0.9409722222222222,
+      "tokens_per_round": 5.135416666666667,
+      "target_forwards_per_token": 0.25557809330628806,
+      "tok_per_s": 17.722010899984124,
+      "time_s": 27.81851352999911,
+      "speedup_vs_greedy": 0.6832046943667311,
+      "peak_mem_MB": 3936.87548828125,
+      "rounds": 96,
+      "drafted": 576,
+      "accepted": 542,
+      "target_fwd": 126,
+      "draft_fwd": 664
+    }
+  ]
+}

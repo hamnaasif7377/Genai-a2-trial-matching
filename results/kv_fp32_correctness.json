@@ -1,0 +1,177 @@
+{
+  "model": "Qwen/Qwen2.5-1.5B-Instruct",
+  "adapter": "/content/drive/MyDrive/GenAI_A2/adapters/lora_r16_v1/final_adapter",
+  "dtype": "float32",
+  "device": "cuda",
+  "gpu": "Tesla T4",
+  "weights_MB": 5888.802734375,
+  "token_identical": "16/16",
+  "correctness": [
+    {
+      "case": "synthetic L=64 N=16",
+      "input_len": 64,
+      "new_tokens": 16,
+      "identical": true,
+      "first_divergence": null,
+      "max_logit_abs_diff_first8": 3.24249267578125e-05,
+      "margin_at_divergence": null
+    },
+    {
+      "case": "synthetic L=64 N=64",
+      "input_len": 64,
+      "new_tokens": 64,
+      "identical": true,
+      "first_divergence": null,
+      "max_logit_abs_diff_first8": 3.24249267578125e-05,
+      "margin_at_divergence": null
+    },
+    {
+      "case": "synthetic L=256 N=16",
+      "input_len": 256,
+      "new_tokens": 16,
+      "identical": true,
+      "first_divergence": null,
+      "max_logit_abs_diff_first8": 7.2479248046875e-05,
+      "margin_at_divergence": null
+    },
+    {
+      "case": "synthetic L=256 N=64",
+      "input_len": 256,
+      "new_tokens": 64,
+      "identical": true,
+      "first_divergence": null,
+      "max_logit_abs_diff_first8": 7.2479248046875e-05,
+      "margin_at_divergence": null
+    },
+    {
+      "case": "synthetic L=1024 N=16",
+      "input_len": 1024,
+      "new_tokens": 16,
+      "identical": true,
+      "first_divergence": null,
+      "max_logit_abs_diff_first8": 3.337860107421875e-05,
+      "margin_at_divergence": null
+    },
+    {
+      "case": "synthetic L=1024 N=64",
+      "input_len": 1024,
+      "new_tokens": 64,
+      "identical": true,
+      "first_divergence": null,
+      "max_logit_abs_diff_first8": 3.337860107421875e-05,
+      "margin_at_divergence": null
+    },
+    {
+      "case": "val annotation 0",
+      "input_len": 281,
+      "new_tokens": 17,
+      "identical": true,
+      "first_divergence": null,
+      "max_logit_abs_diff_first8": 6.389617919921875e-05,
+      "margin_at_divergence": null
+    },
+    {
+      "case": "val annotation 1",
+      "input_len": 260,
+      "new_tokens": 18,
+      "identical": true,
+      "first_divergence": null,
+      "max_logit_abs_diff_first8": 8.296966552734375e-05,
+      "margin_at_divergence": null
+    },
+    {
+      "case": "val annotation 2",
+      "input_len": 266,
+      "new_tokens": 16,
+      "identical": true,
+      "first_divergence": null,
+      "max_logit_abs_diff_first8": 4.1961669921875e-05,
+      "margin_at_divergence": null
+    },
+    {
+      "case": "val annotation 3",
+      "input_len": 281,
+      "new_tokens": 16,
+      "identical": true,
+      "first_divergence": null,
+      "max_logit_abs_diff_first8": 5.14984130859375e-05,
+      "margin_at_divergence": null
+    },
+    {
+      "case": "val annotation 4",
+      "input_len": 267,
+      "new_tokens": 16,
+      "identical": true,
+      "first_divergence": null,
+      "max_logit_abs_diff_first8": 4.0531158447265625e-05,
+      "margin_at_divergence": null
+    },
+    {
+      "case": "val annotation 5",
+      "input_len": 274,
+      "new_tokens": 17,
+      "identical": true,
+      "first_divergence": null,
+      "max_logit_abs_diff_first8": 3.7789344787597656e-05,
+      "margin_at_divergence": null
+    },
+    {
+      "case": "val annotation 6",
+      "input_len": 266,
+      "new_tokens": 16,
+      "identical": true,
+      "first_divergence": null,
+      "max_logit_abs_diff_first8": 3.814697265625e-05,
+      "margin_at_divergence": null
+    },
+    {
+      "case": "val annotation 7",
+      "input_len": 268,
+      "new_tokens": 16,
+      "identical": true,
+      "first_divergence": null,
+      "max_logit_abs_diff_first8": 3.910064697265625e-05,
+      "margin_at_divergence": null
+    },
+    {
+      "case": "val annotation 8",
+      "input_len": 261,
+      "new_tokens": 16,
+      "identical": true,
+      "first_divergence": null,
+      "max_logit_abs_diff_first8": 4.482269287109375e-05,
+      "margin_at_divergence": null
+    },
+    {
+      "case": "val annotation 9",
+      "input_len": 262,
+      "new_tokens": 16,
+      "identical": true,
+      "first_divergence": null,
+      "max_logit_abs_diff_first8": 4.9591064453125e-05,
+      "margin_at_divergence": null
+    }
+  ],
+  "benchmark": [
+    {
+      "input_len": 128,
+      "new_tokens": 16,
+      "cache_MB_analytic": 7.875,
+      "nocache": {
+        "prefill_ms": 140.04597200005264,
+        "decode_ms": 3129.710662999514,
+        "decode_tok_per_s": 4.792775312214965,
+        "total_tok_per_s": 4.893330539874299,
+        "peak_mem_MB": 5916.41796875
+      },
+      "cached": {
+        "prefill_ms": 128.89124499997706,
+        "decode_ms": 525.5057659994691,
+        "decode_tok_per_s": 28.543930381945902,
+        "total_tok_per_s": 24.449989427004798,
+        "peak_mem_MB": 5920.931640625
+      },
+      "speedup_total": 4.996594697163637
+    }
+  ]
+}
